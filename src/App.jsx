@@ -761,7 +761,9 @@ import Counter from "./counter";
 
 function App(){
     return(
-        <div></div>
+        <div>
+            <h1></h1>
+        </div>
     )
 }
 
