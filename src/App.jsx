@@ -762,7 +762,9 @@ import Counter from "./counter";
 function App(){
     return(
         <div>
-            <h1></h1>
+            <h1>
+                component life cycle 
+            </h1>
         </div>
     )
 }
