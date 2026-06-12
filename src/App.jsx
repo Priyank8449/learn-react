@@ -763,7 +763,7 @@ function App(){
     return(
         <div>
             <h1>
-                component life cycle 
+                component life cycle ..
             </h1>
         </div>
     )
