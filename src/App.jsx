@@ -759,6 +759,10 @@ import Counter from "./counter";
 
 // component life cycle in  react js 
 
-
+function App(){
+    return(
+        <div></div>
+    )
+}
 
 export default App;
