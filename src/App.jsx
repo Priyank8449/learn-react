@@ -792,6 +792,16 @@ import Counter from "./counter";
 // styled component 
 // css libraray  and framework
 
+// inline
+
+function App(){
+    return(
+        <div>
+            <h1 style={{color:'green',backgroundColor:'orange'}}> hello </h1>
+        </div>
+    )
+}
+
 
 // inline 
 
