@@ -6,7 +6,7 @@
 
 // import Header from './Header'
 
-import { useEffect, useState } from "react";
+import { use, useEffect, useState } from "react";
 import { College, Student, Nuser, Wrapper, User2 } from "./user";
 import User from "./user";
 import Clock from "./clock";
@@ -759,14 +759,38 @@ import Counter from "./counter";
 
 // component life cycle in  react js 
 
-function App(){
-    return(
-        <div>
-            <h1>
-                component life cycle ..
-            </h1>
-        </div>
-    )
-}
+// 1 mounting phase 
+
+// useEffect(()=>{
+//     console.log("mounting phase")
+// },[])
+
+
+// // 2 updating phase
+// useEffect(()=>{
+//     console.log("updating phase")
+
+
+// },[count])
+
+
+// // 3 unmounting phase
+// useEffect(()=>{
+//     return()=>{
+//         console.log("unmount phase ")
+//     }
+// },[])
+
+
+
+
+
+// styling in  react using css
+// inline 
+// external
+// css modules 
+// styled component 
+// css libraray  and framework
+
 
 export default App;
