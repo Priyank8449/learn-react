@@ -794,23 +794,23 @@ import Counter from "./counter";
 
 // inline
 
-function App() {
-    return (
-        <div style={{display:'flex',flexWrap:'wrap',gap:'20px' ,margin:'20px'}}>
-            <div style={{ border: '1px solid gray', display: 'flex', flexDirection: "column", justifyContent: 'center', alignItems: 'center', width: '200px', borderRadius: '10px' }}>
-                <img style={{ width: '150px', height: '150px', borderRadius: '60%' }} src="https://s.yimg.com/fz/api/res/1.2/IUm8K93y2jWz27YWaeXoDQ--~C/YXBwaWQ9c3JjaGRkO2ZpPXN0cmltO2g9MjI4O3E9ODA7dz00MDA-/https://s.yimg.com/am/60d/eebcb09ccb0d5d9d79b6dc82b69440bd" alt="" />
-                <h4>Name:Trump</h4>
-                <p>Us president</p>
-            </div>
-            <div style={{ border: '1px solid gray', display: 'flex', flexDirection: "column", justifyContent: 'center', alignItems: 'center', width: '200px', borderRadius: '10px' }}>
-                <img style={{ width: '150px', height: '150px', borderRadius: '60%' }} src="https://s.yimg.com/fz/api/res/1.2/IUm8K93y2jWz27YWaeXoDQ--~C/YXBwaWQ9c3JjaGRkO2ZpPXN0cmltO2g9MjI4O3E9ODA7dz00MDA-/https://s.yimg.com/am/60d/eebcb09ccb0d5d9d79b6dc82b69440bd" alt="" />
-                <h4>Name:Trump</h4>
-                <p>Us president</p>
-            </div>
+// function App() {
+//     return (
+//         <div style={{display:'flex',flexWrap:'wrap',gap:'20px' ,margin:'20px'}}>
+//             <div style={{ border: '1px solid gray', display: 'flex', flexDirection: "column", justifyContent: 'center', alignItems: 'center', width: '200px', borderRadius: '10px' }}>
+//                 <img style={{ width: '150px', height: '150px', borderRadius: '60%' }} src="https://s.yimg.com/fz/api/res/1.2/IUm8K93y2jWz27YWaeXoDQ--~C/YXBwaWQ9c3JjaGRkO2ZpPXN0cmltO2g9MjI4O3E9ODA7dz00MDA-/https://s.yimg.com/am/60d/eebcb09ccb0d5d9d79b6dc82b69440bd" alt="" />
+//                 <h4>Name:Trump</h4>
+//                 <p>Us president</p>
+//             </div>
+//             <div style={{ border: '1px solid gray', display: 'flex', flexDirection: "column", justifyContent: 'center', alignItems: 'center', width: '200px', borderRadius: '10px' }}>
+//                 <img style={{ width: '150px', height: '150px', borderRadius: '60%' }} src="https://s.yimg.com/fz/api/res/1.2/IUm8K93y2jWz27YWaeXoDQ--~C/YXBwaWQ9c3JjaGRkO2ZpPXN0cmltO2g9MjI4O3E9ODA7dz00MDA-/https://s.yimg.com/am/60d/eebcb09ccb0d5d9d79b6dc82b69440bd" alt="" />
+//                 <h4>Name:Trump</h4>
+//                 <p>Us president</p>
+//             </div>
             
-        </div>
-    )
-}
+//         </div>
+//     )
+// }
 
 
 // inline 
