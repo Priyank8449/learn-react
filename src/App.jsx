@@ -807,12 +807,72 @@ import Counter from "./counter";
 //                 <h4>Name:Trump</h4>
 //                 <p>Us president</p>
 //             </div>
-            
+
 //         </div>
 //     )
 // }
 
 
-// inline 
+
+
+
+
+// dynamic and consditional style
+
+
+function App() {
+
+  
+
+    const [card, setCard] = useState(
+        {
+            border: '1px solid gray',
+            display: 'flex',
+            flexDirection: "column",
+            justifyContent: 'center',
+            alignItems: 'center',
+            width: '200px',
+            borderRadius: '10px'
+        }
+    )
+
+    const [textColor, setTextColor] = useState('black')
+    const [grid, setGrid] = useState(true)
+
+    const updateTheme = (bgColor, textColor) => {
+        setCard({ ...card, backgroundColor: bgColor })
+        setTextColor(textColor)
+
+    }
+    return (
+
+        <>
+            <h1>Dynamic and consditional  styling</h1>
+            <button onClick={() => updateTheme('gray', 'green')}>gray theme</button>
+            <button onClick={() => updateTheme('white', 'black')}>default theme</button>
+            <button onClick={() => setGrid(!grid)}>grid</button>
+            <div style={{ display: grid ? 'flex' : 'block' }}>
+                <div style={card}>
+                    <img style={{ width: '150px', height: '150px', borderRadius: '60%' }} src="https://s.yimg.com/fz/api/res/1.2/IUm8K93y2jWz27YWaeXoDQ--~C/YXBwaWQ9c3JjaGRkO2ZpPXN0cmltO2g9MjI4O3E9ODA7dz00MDA-/https://s.yimg.com/am/60d/eebcb09ccb0d5d9d79b6dc82b69440bd" alt="" />
+                    <h4>Name:Trump</h4>
+                    <p>Us president</p>
+                </div>
+                <div style={card}>
+                    <img style={{ width: '150px', height: '150px', borderRadius: '60%' }} src="https://s.yimg.com/fz/api/res/1.2/IUm8K93y2jWz27YWaeXoDQ--~C/YXBwaWQ9c3JjaGRkO2ZpPXN0cmltO2g9MjI4O3E9ODA7dz00MDA-/https://s.yimg.com/am/60d/eebcb09ccb0d5d9d79b6dc82b69440bd" alt="" />
+                    <h4>Name:Trump</h4>
+                    <p>Us president</p>
+                </div>
+                <div style={card}>
+                    <img style={{ width: '150px', height: '150px', borderRadius: '60%' }} src="https://s.yimg.com/fz/api/res/1.2/IUm8K93y2jWz27YWaeXoDQ--~C/YXBwaWQ9c3JjaGRkO2ZpPXN0cmltO2g9MjI4O3E9ODA7dz00MDA-/https://s.yimg.com/am/60d/eebcb09ccb0d5d9d79b6dc82b69440bd" alt="" />
+                    <h4>Name:Trump</h4>
+                    <p>Us president</p>
+                </div>
+            </div>
+        </>
+    )
+}
+
+
+
 
 export default App;
