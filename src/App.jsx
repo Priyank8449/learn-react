@@ -12,6 +12,8 @@ import User from "./user";
 import Clock from "./clock";
 import College2 from "./college";
 import Counter from "./counter";
+import './css/style.css'
+import UserProfile from "./uprofile";
 
 // import Login, { Username } from './user'
 
@@ -820,59 +822,451 @@ import Counter from "./counter";
 // dynamic and consditional style
 
 
-function App() {
-
-  
-
-    const [card, setCard] = useState(
-        {
-            border: '1px solid gray',
-            display: 'flex',
-            flexDirection: "column",
-            justifyContent: 'center',
-            alignItems: 'center',
-            width: '200px',
-            borderRadius: '10px'
-        }
-    )
-
-    const [textColor, setTextColor] = useState('black')
-    const [grid, setGrid] = useState(true)
-
-    const updateTheme = (bgColor, textColor) => {
-        setCard({ ...card, backgroundColor: bgColor })
-        setTextColor(textColor)
-
-    }
-    return (
-
-        <>
-            <h1>Dynamic and consditional  styling</h1>
-            <button onClick={() => updateTheme('gray', 'green')}>gray theme</button>
-            <button onClick={() => updateTheme('white', 'black')}>default theme</button>
-            <button onClick={() => setGrid(!grid)}>grid</button>
-            <div style={{ display: grid ? 'flex' : 'block' }}>
-                <div style={card}>
-                    <img style={{ width: '150px', height: '150px', borderRadius: '60%' }} src="https://s.yimg.com/fz/api/res/1.2/IUm8K93y2jWz27YWaeXoDQ--~C/YXBwaWQ9c3JjaGRkO2ZpPXN0cmltO2g9MjI4O3E9ODA7dz00MDA-/https://s.yimg.com/am/60d/eebcb09ccb0d5d9d79b6dc82b69440bd" alt="" />
-                    <h4>Name:Trump</h4>
-                    <p>Us president</p>
-                </div>
-                <div style={card}>
-                    <img style={{ width: '150px', height: '150px', borderRadius: '60%' }} src="https://s.yimg.com/fz/api/res/1.2/IUm8K93y2jWz27YWaeXoDQ--~C/YXBwaWQ9c3JjaGRkO2ZpPXN0cmltO2g9MjI4O3E9ODA7dz00MDA-/https://s.yimg.com/am/60d/eebcb09ccb0d5d9d79b6dc82b69440bd" alt="" />
-                    <h4>Name:Trump</h4>
-                    <p>Us president</p>
-                </div>
-                <div style={card}>
-                    <img style={{ width: '150px', height: '150px', borderRadius: '60%' }} src="https://s.yimg.com/fz/api/res/1.2/IUm8K93y2jWz27YWaeXoDQ--~C/YXBwaWQ9c3JjaGRkO2ZpPXN0cmltO2g9MjI4O3E9ODA7dz00MDA-/https://s.yimg.com/am/60d/eebcb09ccb0d5d9d79b6dc82b69440bd" alt="" />
-                    <h4>Name:Trump</h4>
-                    <p>Us president</p>
-                </div>
-            </div>
-        </>
-    )
-}
+// function App() {
 
 
+
+//     const [card, setCard] = useState(
+//         {
+//             border: '1px solid gray',
+//             display: 'flex',
+//             flexDirection: "column",
+//             justifyContent: 'center',
+//             alignItems: 'center',
+//             width: '200px',
+//             borderRadius: '10px'
+//         }
+//     )
+
+//     const [textColor, setTextColor] = useState('black')
+//     const [grid, setGrid] = useState(true)
+
+//     const updateTheme = (bgColor, textColor) => {
+//         setCard({ ...card, backgroundColor: bgColor })
+//         setTextColor(textColor)
+
+//     }
+//     return (
+
+//         <>
+//             <h1>Dynamic and consditional  styling</h1>
+//             <button onClick={() => updateTheme('gray', 'green')}>gray theme</button>
+//             <button onClick={() => updateTheme('white', 'black')}>default theme</button>
+//             <button onClick={() => setGrid(!grid)}>grid</button>
+//             <div style={{ display: grid ? 'flex' : 'block' }}>
+//                 <div style={card}>
+//                     <img style={{ width: '150px', height: '150px', borderRadius: '60%' }} src="https://s.yimg.com/fz/api/res/1.2/IUm8K93y2jWz27YWaeXoDQ--~C/YXBwaWQ9c3JjaGRkO2ZpPXN0cmltO2g9MjI4O3E9ODA7dz00MDA-/https://s.yimg.com/am/60d/eebcb09ccb0d5d9d79b6dc82b69440bd" alt="" />
+//                     <h4>Name:Trump</h4>
+//                     <p>Us president</p>
+//                 </div>
+//                 <div style={card}>
+//                     <img style={{ width: '150px', height: '150px', borderRadius: '60%' }} src="https://s.yimg.com/fz/api/res/1.2/IUm8K93y2jWz27YWaeXoDQ--~C/YXBwaWQ9c3JjaGRkO2ZpPXN0cmltO2g9MjI4O3E9ODA7dz00MDA-/https://s.yimg.com/am/60d/eebcb09ccb0d5d9d79b6dc82b69440bd" alt="" />
+//                     <h4>Name:Trump</h4>
+//                     <p>Us president</p>
+//                 </div>
+//                 <div style={card}>
+//                     <img style={{ width: '150px', height: '150px', borderRadius: '60%' }} src="https://s.yimg.com/fz/api/res/1.2/IUm8K93y2jWz27YWaeXoDQ--~C/YXBwaWQ9c3JjaGRkO2ZpPXN0cmltO2g9MjI4O3E9ODA7dz00MDA-/https://s.yimg.com/am/60d/eebcb09ccb0d5d9d79b6dc82b69440bd" alt="" />
+//                     <h4>Name:Trump</h4>
+//                     <p>Us president</p>
+//                 </div>
+//             </div>
+//         </>
+//     )
+// }
+
+
+
+// function App() {
+//     return (
+//         <>
+//             <h1 className="heading">external  styling </h1>
+//             <div className="container">
+
+//                 <div className="div1">
+//                     <div >
+//                         <img className="img" src="https://tse4.mm.bing.net/th/id/OIP.h4ezlP6uFbMK36xksoCleQHaE8?pid=Api&h=220&P=0" alt="" />
+//                     </div>
+//                     <div className="text-wrap">
+//                         <h4>
+//                             Narendra Modi
+//                         </h4>
+//                         <p>Prime Minister Of India</p>
+//                     </div>
+//                 </div>
+//                 <div className="div1">
+//                     <div >
+//                         <img className="img" src="https://tse4.mm.bing.net/th/id/OIP.h4ezlP6uFbMK36xksoCleQHaE8?pid=Api&h=220&P=0" alt="" />
+//                     </div>
+//                     <div className="text-wrap">
+//                         <h4>
+//                             Narendra Modi
+//                         </h4>
+//                         <p>Prime Minister Of India</p>
+//                     </div>
+//                 </div>
+//                 <div className="div1">
+//                     <div >
+//                         <img className="img" src="https://tse4.mm.bing.net/th/id/OIP.h4ezlP6uFbMK36xksoCleQHaE8?pid=Api&h=220&P=0" alt="" />
+//                     </div>
+//                     <div className="text-wrap">
+//                         <h4>
+//                             Narendra Modi
+//                         </h4>
+//                         <p>Prime Minister Of India</p>
+//                     </div>
+//                 </div>
+//                 <div className="div1">
+//                     <div >
+//                         <img className="img" src="https://tse4.mm.bing.net/th/id/OIP.h4ezlP6uFbMK36xksoCleQHaE8?pid=Api&h=220&P=0" alt="" />
+//                     </div>
+//                     <div className="text-wrap">
+//                         <h4>
+//                             Narendra Modi
+//                         </h4>
+//                         <p>Prime Minister Of India</p>
+//                     </div>
+//                 </div>
+//                 <div className="div1">
+//                     <div >
+//                         <img className="img" src="https://tse4.mm.bing.net/th/id/OIP.h4ezlP6uFbMK36xksoCleQHaE8?pid=Api&h=220&P=0" alt="" />
+//                     </div>
+//                     <div className="text-wrap">
+//                         <h4>
+//                             Narendra Modi
+//                         </h4>
+//                         <p>Prime Minister Of India</p>
+//                     </div>
+//                 </div>
+//                 <div className="div1">
+//                     <div >
+//                         <img className="img" src="https://tse4.mm.bing.net/th/id/OIP.h4ezlP6uFbMK36xksoCleQHaE8?pid=Api&h=220&P=0" alt="" />
+//                     </div>
+//                     <div className="text-wrap">
+//                         <h4>
+//                             Narendra Modi
+//                         </h4>
+//                         <p>Prime Minister Of India</p>
+//                     </div>
+//                 </div>
+//                 <div className="div1">
+//                     <div >
+//                         <img className="img" src="https://tse4.mm.bing.net/th/id/OIP.h4ezlP6uFbMK36xksoCleQHaE8?pid=Api&h=220&P=0" alt="" />
+//                     </div>
+//                     <div className="text-wrap">
+//                         <h4>
+//                             Narendra Modi
+//                         </h4>
+//                         <p>Prime Minister Of India</p>
+//                     </div>
+//                 </div>
+//                 <div className="div1">
+//                     <div >
+//                         <img className="img" src="https://tse4.mm.bing.net/th/id/OIP.h4ezlP6uFbMK36xksoCleQHaE8?pid=Api&h=220&P=0" alt="" />
+//                     </div>
+//                     <div className="text-wrap">
+//                         <h4>
+//                             Narendra Modi
+//                         </h4>
+//                         <p>Prime Minister Of India</p>
+//                     </div>
+//                 </div>
+//                 <div className="div1">
+//                     <div >
+//                         <img className="img" src="https://tse4.mm.bing.net/th/id/OIP.h4ezlP6uFbMK36xksoCleQHaE8?pid=Api&h=220&P=0" alt="" />
+//                     </div>
+//                     <div className="text-wrap">
+//                         <h4>
+//                             Narendra Modi
+//                         </h4>
+//                         <p>Prime Minister Of India</p>
+//                     </div>
+//                 </div>
+//                 <div className="div1">
+//                     <div >
+//                         <img className="img" src="https://tse4.mm.bing.net/th/id/OIP.h4ezlP6uFbMK36xksoCleQHaE8?pid=Api&h=220&P=0" alt="" />
+//                     </div>
+//                     <div className="text-wrap">
+//                         <h4>
+//                             Narendra Modi
+//                         </h4>
+//                         <p>Prime Minister Of India</p>
+//                     </div>
+//                 </div>
+//                 <div className="div1">
+//                     <div >
+//                         <img className="img" src="https://tse4.mm.bing.net/th/id/OIP.h4ezlP6uFbMK36xksoCleQHaE8?pid=Api&h=220&P=0" alt="" />
+//                     </div>
+//                     <div className="text-wrap">
+//                         <h4>
+//                             Narendra Modi
+//                         </h4>
+//                         <p>Prime Minister Of India</p>
+//                     </div>
+//                 </div>
+//                 <div className="div1">
+//                     <div >
+//                         <img className="img" src="https://tse4.mm.bing.net/th/id/OIP.h4ezlP6uFbMK36xksoCleQHaE8?pid=Api&h=220&P=0" alt="" />
+//                     </div>
+//                     <div className="text-wrap">
+//                         <h4>
+//                             Narendra Modi
+//                         </h4>
+//                         <p>Prime Minister Of India</p>
+//                     </div>
+//                 </div>
+//             </div>
+//         </>
+//     )
+// }
+
+
+
+
+
+// styling with  css  modules
+
+
+// function App(){
+//     return(
+//         <>
+//         <h1 className="heading">style with css module</h1>
+//         <UserProfile />
+//         </>
+//     )
+// }
+
+
+// styled component 
+
+// npm i styled-components use this command to install 
+
+// import styled from "styled-components";
+
+
+// function App(){
+//     const Heading =styled.h1`
+//     color:blue;
+
+//     `
+//     return(
+//         <div>
+//             <Heading> hi  i am a styled component </Heading>
+//         </div>
+//     )
+// }
+
+
+
+// Adding bootstarp  in react
+
+// import  {Alert } from "react-bootstrap";
+// import  {Button } from "react-bootstrap";
+
+
+// function App(){
+//     return(
+//         <div>
+//             <Button>click me </Button>
+//             <Alert variant="warning">i  am alert</Alert>
+//         </div>
+//     )
+// }
+
+
+
+// // useRef hook  in  react js 
+// import { useRef } from "react";
+
+
+// function App(){
+
+//      const inputRef=useRef(null);
+//      const h1Ref=useRef(null);
+//      const inputHandler=()=>{
+//         inputRef.current.focus()
+//         inputRef.current.placeholder="enter name"
+//         inputRef.current.value='priyank'
+//         inputRef.current.style.color='red'
+//      }
+
+
+//      const h1handler=()=>{
+//         if(h1Ref.current.style.color!="green"){
+//             h1Ref.current.style.color="green"
+
+//         }
+//         else{
+//              h1Ref.current.style.color="blue"
+
+
+//         }
+
+//      }
+
+//     return(
+//         <div>
+//             <h1> useRef hooks in react </h1>
+//             <input  ref ={inputRef} type="text" placeholder="enter user name" />
+//             <button onClick={inputHandler}>focus on  inout field</button>
+
+
+//             <h1 ref={h1Ref}>hello i ama baba tillu   </h1>
+//             <button onClick={h1handler}> click mmeeee</button>
+//         </div>
+//     )
+// }
+
+
+
+
+
+
+// function App() {
+//   return (
+//     <>
+//       <style>
+//         {`
+//           @keyframes shine {
+//             from {
+//               transform: translateX(-400px) rotate(30deg);
+//             }
+//             to {
+//               transform: translateX(500px) rotate(30deg);
+//             }
+//           }
+
+//           @keyframes float {
+//             0%,100% {
+//               transform: translateY(0px);
+//             }
+//             50% {
+//               transform: translateY(-10px);
+//             }
+//           }
+
+//           .glass-card {
+//             animation: float 4s ease-in-out infinite;
+//           }
+
+//           .shine {
+//             animation: shine 4s linear infinite;
+//           }
+//         `}
+//       </style>
+
+//       <div
+//         style={{
+//           width: "100vw",
+//           height: "100vh",
+//           backgroundImage:
+//             "url('https://png.pngtree.com/background/20230520/original/pngtree-3d-planets-in-space-wallpapers-for-mobile-picture-image_2670749.jpg')",
+//           backgroundSize: "cover",
+//           backgroundPosition: "center",
+//           display: "flex",
+//           justifyContent: "center",
+//           alignItems: "center",
+//           overflow: "hidden",
+//         }}
+//       >
+//         <div
+//           className="glass-card"
+//           style={{
+//             width: "360px",
+//             height: "220px",
+//             position: "relative",
+//             overflow: "hidden",
+
+//             /* Liquid Glass */
+//             background:
+//               "linear-gradient(135deg, rgba(255, 255, 255, 0), rgba(255,255,255,0.05))",
+
+//             backdropFilter: "blur(10px) saturate(180%)",
+//             WebkitBackdropFilter: "blur(10px) saturate(180%)",
+
+//             border: "1px solid rgba(255,255,255,0.25)",
+//             borderRadius: "32px",
+
+//             boxShadow: `
+//               0 20px 50px rgba(0,0,0,0.25),
+//               inset 0 1px 1px rgba(255,255,255,0.8),
+//               inset 0 -1px 1px rgba(255,255,255,0.15)
+//             `,
+
+//             display: "flex",
+//             justifyContent: "center",
+//             alignItems: "center",
+//           }}
+//         >
+//           {/* Top Glow */}
+//           <div
+//             style={{
+//               position: "absolute",
+//               top: "-80px",
+//               left: "-40px",
+//               width: "250px",
+//               height: "250px",
+//               borderRadius: "50%",
+//               background:
+//                 "radial-gradient(circle, rgba(255,255,255,0.45), transparent 70%)",
+//               pointerEvents: "none",
+//             }}
+//           />
+
+//           {/* Bottom Glow */}
+//           <div
+//             style={{
+//               position: "absolute",
+//               bottom: "-100px",
+//               right: "-60px",
+//               width: "250px",
+//               height: "250px",
+//               borderRadius: "50%",
+//               background:
+//                 "radial-gradient(circle, rgba(255,255,255,0.15), transparent 70%)",
+//               pointerEvents: "none",
+//             }}
+//           />
+
+//           {/* Moving Shine */}
+//           <div
+//             className="shine"
+//             style={{
+//               position: "absolute",
+//               top: "-50%",
+//               left: "-100%",
+//               width: "80px",
+//               height: "300%",
+//               background:
+//                 "linear-gradient(to right, transparent, rgba(255,255,255,0.4), transparent)",
+//               pointerEvents: "none",
+//             }}
+//           />
+
+//           <h1
+//             style={{
+//               color: "white",
+//               fontSize: "2.5rem",
+//               fontWeight: "700",
+//               letterSpacing: "2px",
+//               textShadow: "0 2px 20px rgba(255,255,255,0.4)",
+//               zIndex: 2,
+//             }}
+//           >
+//             PRIYANK
+//           </h1>
+//         </div>
+//       </div>
+//     </>
+//   );
+// }
+
+
+
+
+
+
+
+// uncontrolled component
 
 
 export default App;

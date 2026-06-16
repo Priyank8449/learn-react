@@ -1,0 +1,26 @@
+.heading{
+    color: red;
+}
+.img{
+    width: 200px;
+
+}
+
+.div1{
+    width:200px;
+    margin: 10px;
+    border:1px solid #ddd;
+    border-radius: 10px;
+    flex-wrap: wrap;
+
+    box-shadow: 1px 1px 3px 1px #514949 ;
+}
+.text-wrap{
+    padding:10px;
+
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
