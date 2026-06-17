@@ -6,4 +6,13 @@ function Header(){
     );
 }
 
-export default Header;
+
+export function InputField (props){
+    return (
+        <>
+        <input ref={props.ref} type="text" />
+        </>
+    )
+}
+
+export default Header; 

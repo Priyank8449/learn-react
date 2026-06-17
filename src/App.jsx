@@ -11,9 +11,13 @@ import { College, Student, Nuser, Wrapper, User2 } from "./user";
 import User from "./user";
 import Clock from "./clock";
 import College2 from "./college";
-import Counter from "./counter";
+import Counter, { User3 } from "./counter";
 import './css/style.css'
 import UserProfile from "./uprofile";
+
+import { useRef } from "react";
+import { InputField } from "./Header";
+import { useFormStatus } from "react-dom";
 
 // import Login, { Username } from './user'
 
@@ -1268,5 +1272,145 @@ import UserProfile from "./uprofile";
 
 // uncontrolled component
 
+// function  App(){
 
+//      const userRef=useRef(null);
+
+//     const  handleForm=()=>{
+//         event.preventDefault()
+//         const user=document.querySelector('#user').value
+
+//         console.log(user)
+//     }
+
+
+//     const handleFormRef=()=>{
+//         event.preventDefault()
+
+//         const user=userRef.current.value
+
+
+//         console.log(user)
+
+//     }
+//     return(
+
+//         <div>
+
+//         <form action="" onSubmit={handleForm}>
+//             <input  id='user'type="text" placeholder="enter user name" />
+//             <br />
+//             <input id='password' type="text" placeholder="enter user password" />
+
+//             <button>submit</button>
+//         </form>
+
+//         <hr />
+//   <form action="" onSubmit={handleFormRef}>
+//             <input ref={userRef} type="text" placeholder="enter user name" />
+//             <br />
+//             <input id='password' type="text" placeholder="enter user password" />
+
+//             <button>submit ref</button>
+//         </form>
+
+
+
+//         </div>
+//     )
+// }
+
+
+
+
+//  passing function  in  component as props 
+// function App(){
+
+//     const displayName=(name)=>{
+//         alert(name)
+//     }
+//     return(
+//         <div>
+//             <h1>passing function in  component as props </h1>
+//             <User3 displayName={displayName} name="priyank"/>
+//             <User3 displayName={displayName} name="aditi"/>
+//             <User3 displayName={displayName} name="sam"/>
+//         </div>
+//     )
+// }
+
+
+
+
+// ForwardRef in react 
+
+// function App(){
+
+//     const inputRef=useRef(null);
+
+//     const updateInput=()=>{
+//         inputRef.current.value=1000;
+//         inputRef.current.focus();
+//         inputRef.current.style.color='blue';
+//     }
+
+
+//     return(
+//         <>
+//         <h1>forward ref</h1>
+//         <InputField ref={inputRef} />
+//         <button onClick={updateInput}>update input field</button>
+//         </>
+//     )
+// }
+
+
+
+// use Formstatus Hook in react js 
+
+// function App() {
+
+
+//     const handleSubmit = async () => {
+//         await new Promise(res => setTimeout(res, 2000))
+//         console.log("submit")
+//     }
+
+//     function CustomerForm() {
+//         const { pending } = useFormStatus()
+//         return (
+//             <>
+//                 <input type="text" placeholder="enter name" />
+
+//                 <br />
+//                 <br />
+//                 <input type="text" placeholder="entee password" />
+//                 <br />
+//                 <br />
+//                 <button disabled={pending}>{pending?'submitting..':'submit'}</button>
+//             </>
+//         )
+//     }
+//     return (
+//         <>  
+//             <h1>use Formstatus Hook in react js </h1>
+
+//             <form action={handleSubmit}>
+//                 <CustomerForm />
+//             </form>
+//         </>
+//     )
+// }
+
+
+
+//useTransition hook in react js 
+
+function App(){
+    return(
+        <>
+        
+        </>
+    )
+}
 export default App;

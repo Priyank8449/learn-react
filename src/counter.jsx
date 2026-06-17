@@ -28,4 +28,13 @@ function Counter({count,data}){
     )
 }
 
+
+export function User3({displayName,name}){
+    return(
+        <div>
+            <button onClick={()=>displayName(name)}>display  name</button>
+        </div>
+    )
+}
+
 export default Counter
