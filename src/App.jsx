@@ -6,7 +6,7 @@
 
 // import Header from './Header'
 
-import { use, useEffect, useState } from "react";
+import { Fragment, use, useActionState, useEffect, useState, useTransition } from "react";
 import { College, Student, Nuser, Wrapper, User2 } from "./user";
 import User from "./user";
 import Clock from "./clock";
@@ -18,6 +18,8 @@ import UserProfile from "./uprofile";
 import { useRef } from "react";
 import { InputField } from "./Header";
 import { useFormStatus } from "react-dom";
+import AddUser from "./AddUser";
+import DisplayUser from "./DisplayUser";
 
 // import Login, { Username } from './user'
 
@@ -1406,11 +1408,398 @@ import { useFormStatus } from "react-dom";
 
 //useTransition hook in react js 
 
+// function App(){
+//     const[pending ,setPending]=useState(false);
+
+//     const handleButton= async()=>{
+
+
+//         setPending(true);
+//         await new Promise(res=>setTimeout(res,2000));
+
+//         setPending(false)
+
+//     }
+//     return(
+//         <>
+//         <h1>useTransition hook </h1>
+//         <button disabled={pending} onClick={handleButton}>click</button>
+//         </>
+//     )
+// }
+
+// import "./App.css";
+
+// function App(){
+//   const [pending,startTransition]=useTransition()
+
+
+
+//     const handleButton= async()=>{
+
+//         startTransition(async()=>{
+//             await new Promise(res=>setTimeout(res,2000));
+
+//         })
+//     }
+//     return(
+//         <>
+//         <h1>useTransition hook </h1>
+//         {
+//             pending?
+//             <img   className="spinner"
+// src="https://static.vecteezy.com/system/resources/previews/014/475/046/original/download-icon-website-buffer-loader-a-spinning-circle-to-download-information-on-the-website-png.png" alt="" />
+//             :null
+//         }
+//         <button disabled={pending} onClick={handleButton}>click</button>
+//         </>
+//     )
+// }
+
+
+
+// derived state in  react js 
+
+
+// function App(){
+
+//     const[users,setUsers]=useState([]);
+//     const[user,setUser]=useState()
+
+//     const  handleAddUser=()=>{
+//         setUsers([...users,user])
+//     }
+
+
+//     const total=users.length
+//     const  last=users[users.length-1]
+
+//     const unique=[...new Set(users)].length
+
+//     return(
+//         <>
+//         <h1>deriverd state in  react js</h1>
+
+//         <h1>total  users:{total}</h1>
+//         <h1>last  user:{last}</h1>
+//         <h1>unique  total user:{unique}</h1>
+//         <input type="text" onChange={(event)=>setUser(event.target.value)} placeholder="add new user"/>
+//         <button onClick={handleAddUser}>add user</button>
+
+//         {
+//             users.map((item,index)=>(
+//                 <h4 key={index}>{item}</h4>
+//             ))
+//         }
+//         </>
+//     )
+// }
+
+
+
+
+// lifting state up in react  js 
+
+
+// function App(){
+//         const[user,setUser]=useState()
+
+//     return (
+//         <>
+//         <AddUser  setUser={setUser}/>
+//         <DisplayUser user={user}/>
+//         </>
+//     )
+// }
+
+
+
+// updating object in  state 
+
+// function App(){
+
+//     const[data,setData]=useState(
+//         {
+//             name:"priyank",
+//             address:{
+//                 city:"hathras",
+//                 country:"india"
+//             }
+//         }
+//     )
+
+
+//     const handleName=(val)=>{
+// data.name=val
+
+// setData({...data})
+//     }
+//     const handlecity=(city)=>{
+// data.address.city=city
+
+// setData({...data,address:{...data.address,city}})
+//     }
+//     return(
+// <>
+// <h1>updating object  in state</h1>
+// <input type="text" onChange={(event)=>handleName(event.target.value)} placeholder="update name" />
+
+
+// <br />
+// <input type="text" onChange={(event)=>handlecity(event.target.value)} placeholder="update city" />
+
+// <h2>name:{data.name}</h2>
+// <h2>name:{data.address.city}</h2>
+// <h2>name:{data.address.country}</h2>
+// </>
+//     )
+// }
+
+
+
+// updating Array in react js 
+
+// function App(){
+// const [data,setData]=useState([
+//     'priyank','aditi','sam'
+// ])
+
+
+// const [dataDetails,setDataDetails]=useState(
+// [
+//     {
+//         name:'priyank',
+//         age:'21'
+//     },
+//     {
+//         name:'aditi',
+//         age:'20'
+//     },
+//     {
+//         name:'sam',
+//         age:'20'
+//     }
+// ]
+// )
+
+
+
+
+// const handleName=(name)=>{
+//     data[data.length-1]=name
+//     setData([...data])
+// }
+
+
+// const handleAge=(age)=>{
+// dataDetails[dataDetails.length-1].age=age
+// setDataDetails( [...data])
+// }
+//     return(
+//         <>
+//         <h1>updating array  in  react js</h1>
+
+//         <input type="text" onChange={(event)=>handleName(event.target.value)} placeholder="enter last user name"/>
+
+//         <h2>{name}</h2>
+//         {
+//             data.map((item,index)=>(
+//                 <h3 key={index}>{item}</h3>
+//             ))
+//         }
+// <hr />
+
+// <input type="text" onChange={(event)=>handleAge(event.target.value)} placeholder="enter last user age"/>
+
+// {
+//     dataDetails.map((items,index)=>{
+//         <h3 key={index}>{items.name},{items.age}</h3>
+//     })
+// }
+
+
+
+//         </>
+//     )
+// }
+
+
+
+// useActionState hooks in  react  js 
+
+
+// function App(){
+
+//     const  handleSubmit=async(previousData,formData)=>{
+
+//         let name=formData.get('name')
+//         let password=formData.get('password')
+
+//             await new Promise(res=>setTimeout(res,2000))
+
+//             if(name && password){
+//                 return{message:'data submitted',name,password}
+//             }else{
+//                 return{error:'falied to  sunbmit '}
+//             }
+
+
+//     }
+
+//     const[data,action,pending]=useActionState(handleSubmit,undefined)
+
+//     return(
+//         <>
+//          <h1>useAction state hooks in  react js</h1>
+// <form action={action}>
+
+//          <input defaultValue={data?.name} type="text" placeholder="enter name" name= "name"/>
+//          <br /><br />
+//          <input defaultValue={data?.password} type="password" placeholder="enter password "name="password" />
+
+// <button disabled={pending}>submit data</button>
+// {
+//     data?.error && < span style={{color:'red'}}>{data?.error}</span>
+// }
+// {
+//     data?.message && <span style={{color:'green'}}>
+//     {data?.message}
+//     </span> 
+
+// }
+// </form>
+
+
+// <h3> name:{data?.name}</h3>
+
+// <h3>{data?.password}</h3>
+//         </>
+//     )
+// }
+
+
+
+// // useId hook in react js .
+// import { useId } from "react"; 
+// function  App (){
+
+
+//     return(
+ 
+//         <>
+//         <User5 />
+//         <User5 />
+//         </>
+//     )
+
+// }
+
+// // function  User5 (){
+// //     const  name = useId()
+// //     const  pass = useId()
+// //     const  skills = useId()
+
+// //     return(
+// //         <>
+// // <form action="">
+    
+// //     <label htmlFor={name}>name</label>
+// //     <input id={name} type="text" placeholder="enter name " />
+
+// //     <br />
+// //     <br />
+// //     <label htmlFor={pass}>password</label>
+// //     <input id={pass} type="text" placeholder="enter passs " />
+// // </form>
+
+// // <br />
+// //         </>
+// //     )
+
+// // }
+
+
+// // by this method we have to  write different id for every  item 
+// // so we will use it as prefix
+
+
+
+// function  User5 (){
+//     const  user = useId()
+  
+//     return(
+//         <>
+// <form action="">
+    
+//     <label htmlFor={user+"name"}>name</label>
+//     <input id={user+"name"} type="text" placeholder="enter name " />
+
+//     <br />
+//     <br />
+//     <label htmlFor={user+"pass"}>password</label>
+//     <input id={user+"pass"} type="text" placeholder="enter passs " />
+// </form>
+
+// <br />
+//         </>
+//     )
+
+// }
+
+
+
+
+//  Fragment  in  react  js 
+
+  // <></> this is the short form of the fragment  
+
+
+// function App(){
+//     return (
+
+//         <Fragment>
+//             <h1>i  am inside fragment  help to
+//                   reduce div that we use to contain multiple element together</h1>
+//         </Fragment>
+
+//     )
+// }
+
+
+// rules for react js hooks
+// start with use 
+//use hooks at top  level  of component
+
+// do not call hooks inside conditions or loop
+// dnch after a consditional  return statement
+//dnch in event handlers
+// dnch in  class component
+// dnch inside try  catch finally 
+
+
+
+
+// make custom  hooks
+
+
+
 function App(){
-    return(
+
+    const useToggle=(defaultval)=>{
+const [value,setvalue]=useState()
+function ToggleValue(val){
+    if(typeof val!='boolean'){
+        setvalue(!val)
+    }else{
+        setvalue(val)
+    }
+}
+    }
+    return (
         <>
         
         </>
+
     )
 }
 export default App;

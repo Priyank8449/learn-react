@@ -182,3 +182,30 @@
     border-right-color: var(--border);
   }
 } */
+
+
+
+.spinner {
+  width: 100px;
+  height: 100px;
+  animation: spin 1s linear infinite;
+}
+
+button {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
