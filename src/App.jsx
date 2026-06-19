@@ -1686,7 +1686,7 @@ import useToggle from "./useToggle";
 
 
 //     return(
- 
+
 //         <>
 //         <User5 />
 //         <User5 />
@@ -1703,7 +1703,7 @@ import useToggle from "./useToggle";
 // //     return(
 // //         <>
 // // <form action="">
-    
+
 // //     <label htmlFor={name}>name</label>
 // //     <input id={name} type="text" placeholder="enter name " />
 
@@ -1727,11 +1727,11 @@ import useToggle from "./useToggle";
 
 // function  User5 (){
 //     const  user = useId()
-  
+
 //     return(
 //         <>
 // <form action="">
-    
+
 //     <label htmlFor={user+"name"}>name</label>
 //     <input id={user+"name"} type="text" placeholder="enter name " />
 
@@ -1752,7 +1752,7 @@ import useToggle from "./useToggle";
 
 //  Fragment  in  react  js 
 
-  // <></> this is the short form of the fragment  
+// <></> this is the short form of the fragment  
 
 
 // function App(){
@@ -1783,22 +1783,57 @@ import useToggle from "./useToggle";
 // make custom  hooks
 
 
-function App(){
+// function App(){
 
-    const[value,ToggleValue]=useToggle(true)
-    return(
+//     const[value,ToggleValue]=useToggle(true)
+//     return(
 
-        <>
-        <button onClick={ToggleValue}>toggle heading</button>
-        <button  onClick={()=>ToggleValue(false)}>hide heading</button>
-        <button  onClick={()=>ToggleValue(true)}>show heading</button>
+//         <>
+//         <button onClick={ToggleValue}>toggle heading</button>
+//         <button  onClick={()=>ToggleValue(false)}>hide heading</button>
+//         <button  onClick={()=>ToggleValue(true)}>show heading</button>
 
 
-{
-    value?         <h1> custom hoooks in react</h1> :null
+// {
+//     value?         <h1> custom hoooks in react</h1> :null
 
-}
-        </>
-    )
-}
+// }
+//         </>
+//     )
+// }
+
+
+//context  API
+
+// import College10 from "./College2"
+// import Subject10 from "./subjext";
+// import { SubjectContext } from "./context";
+// function App() {
+//     const[subject,setSubject]=useState("english")
+//     return (
+//         <>
+//             <div style={{ backgroundColor: 'yellow', padding: '10px' }}>
+
+//                 <SubjectContext.Provider value={subject}>
+
+//                     <select value={subject} defaultValue={subject}  onChange={(event)=>setSubject(event.target.value)} name="" id="">
+//                         <option value="">Select subject</option>
+//                         <option value="math">math</option>
+//                         <option value="english">eng</option>
+//                         <option value="hindi">hindi</option>
+//                     </select>
+//                     <h1>context api</h1>
+
+//                     <button onClick={()=>setSubject('')}>clear sub</button>
+//                     <College10 />
+
+
+//                 </SubjectContext.Provider>
+//             </div>
+//         </>
+//     )
+// }
+
+
+// react router 7 setup 
 export default App;
