@@ -20,6 +20,7 @@ import { InputField } from "./Header";
 import { useFormStatus } from "react-dom";
 import AddUser from "./AddUser";
 import DisplayUser from "./DisplayUser";
+import useToggle from "./useToggle";
 
 // import Login, { Username } from './user'
 
@@ -1782,24 +1783,22 @@ import DisplayUser from "./DisplayUser";
 // make custom  hooks
 
 
-
 function App(){
 
-    const useToggle=(defaultval)=>{
-const [value,setvalue]=useState()
-function ToggleValue(val){
-    if(typeof val!='boolean'){
-        setvalue(!val)
-    }else{
-        setvalue(val)
-    }
-}
-    }
-    return (
-        <>
-        
-        </>
+    const[value,ToggleValue]=useToggle(true)
+    return(
 
+        <>
+        <button onClick={ToggleValue}>toggle heading</button>
+        <button  onClick={()=>ToggleValue(false)}>hide heading</button>
+        <button  onClick={()=>ToggleValue(true)}>show heading</button>
+
+
+{
+    value?         <h1> custom hoooks in react</h1> :null
+
+}
+        </>
     )
 }
 export default App;
