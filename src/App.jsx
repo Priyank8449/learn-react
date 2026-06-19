@@ -1834,8 +1834,30 @@ import useToggle from "./useToggle";
 //     )
 // }
 
+// import { BrowserRouter , Routes,Route,Link} from "react-router";
 
-// react router 7 setup 
+// // react router 7 setup 
+
+// function App(){
+//     return(
+//         <>
+//         <BrowserRouter>
+
+//         <Link to="/"> home</Link>
+//         <Link to="/about"> about</Link>
+//         <Link to="contact"> contact</Link>
+//         <Routes>
+//             <Route path="/" element={<h1>home</h1>} />
+//             <Route path="/about" element={<h1>about</h1>} />
+//             <Route path="/contact" element={<h1>contact</h1>} />
+
+//         </Routes>
+//         </BrowserRouter>
+//         </>
+//     )
+// }
+// basics pages using react router 
+
 
 
 export default App;
