@@ -23,7 +23,7 @@ import DisplayUser from "./DisplayUser";
 import useToggle from "./useToggle";
 import Navbar2 from "./navbar";
 import { BrowserRouter } from "react-router";
-
+import Detail from "./detail";
 // import Login, { Username } from './user'
 
 // import {Signin} from './user'
@@ -1887,6 +1887,7 @@ import {  Routes,Route,Link} from "react-router";
 
 import PageNotFound from './pagenotfound'
 import CollegeForNav from "./collegeforNav";
+import Department from "./department";
 
 // function App(){
 //     return(
@@ -1928,7 +1929,10 @@ function App(){
              <Route path="/" element={<h1>home</h1>} />
             <Route path="/about" element={<h1>about</h1>} />
             <Route path="/login" element={<h1>login</h1>} />
-            <Route path="/college" element={<CollegeForNav />} />
+            <Route path="/college" element={<CollegeForNav />} >
+            <Route path="department" element={<Department />}/>
+            <Route path="detail" element={<Detail />}/>
+            </Route>
 
 
             <Route path="/*" element={<PageNotFound />} />
