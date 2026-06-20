@@ -21,7 +21,8 @@ import { useFormStatus } from "react-dom";
 import AddUser from "./AddUser";
 import DisplayUser from "./DisplayUser";
 import useToggle from "./useToggle";
-import Navbar from "./navbar";
+import Navbar2 from "./navbar";
+import { BrowserRouter } from "react-router";
 
 // import Login, { Username } from './user'
 
@@ -1835,11 +1836,10 @@ import Navbar from "./navbar";
 //     )
 // }
 
-// import { BrowserRouter , Routes,Route,Link} from "react-router";
+import {  Routes,Route,Link} from "react-router";
 
 // // // react router 7 setup 
 
-// import Navbar2 from "./navbar";
 
 // function App(){
 //     return(
@@ -1863,6 +1863,25 @@ import Navbar from "./navbar";
 
 // header with  react  router
 
+// function App(){
+//     return(
+//         <>
+
+//         <BrowserRouter>
+        
+//         <Navbar2 />
+
+//          <Routes>
+//              <Route path="/" element={<h1>home</h1>} />
+//             <Route path="/about" element={<h1>about</h1>} />
+//             <Route path="/login" element={<h1>login</h1>} />
+
+//          </Routes>
+
+//         </BrowserRouter>
+//         </>
+//     )
+// }
 
 
 export default App;

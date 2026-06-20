@@ -1,0 +1,35 @@
+.header{
+    background-color: rgb(234, 184, 229);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+
+
+
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.header ul{
+    display: flex;
+    list-style-type: none;
+    margin: auto;
+    justify-content: space-around;
+    width: 250px;
+}
+
+.hearder ul li{
+    padding: 10px;
+}
+
+.header .link h2{
+    margin: 0;
+}
+
+.header .link {
+    text-decoration: none;
+    font-size: 20px;
+}
