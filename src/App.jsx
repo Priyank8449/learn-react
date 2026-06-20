@@ -1883,5 +1883,31 @@ import {  Routes,Route,Link} from "react-router";
 //     )
 // }
 
+// 404 page and redirection
+
+import PageNotFound from './pagenotfound'
+
+function App(){
+    return(
+        <>
+
+        <BrowserRouter>
+        
+        <Navbar2 />
+
+         <Routes>
+             <Route path="/" element={<h1>home</h1>} />
+            <Route path="/about" element={<h1>about</h1>} />
+            <Route path="/login" element={<h1>login</h1>} />
+            <Route path="/*" element={<PageNotFound />} />
+
+         </Routes>
+
+        </BrowserRouter>
+        </>
+    )
+}
+
+
 
 export default App;
