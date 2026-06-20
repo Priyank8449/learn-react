@@ -1886,7 +1886,36 @@ import {  Routes,Route,Link} from "react-router";
 // 404 page and redirection
 
 import PageNotFound from './pagenotfound'
+import CollegeForNav from "./collegeforNav";
 
+// function App(){
+//     return(
+//         <>
+
+//         <BrowserRouter>
+        
+//         <Navbar2 />
+
+//          <Routes>
+//              <Route path="/" element={<h1>home</h1>} />
+//             <Route path="/about" element={<h1>about</h1>} />
+//             <Route path="/login" element={<h1>login</h1>} /> 
+
+
+//             <Route path="/*" element={<PageNotFound />} />
+//             <Route path="/*" element={<Navigate to="/" />} />
+
+//          </Routes>
+
+//         </BrowserRouter>
+//         </>
+//     )
+// }
+
+
+// nested navigation 
+
+// import CollegeForNav from "./collegeforNav";
 function App(){
     return(
         <>
@@ -1899,6 +1928,9 @@ function App(){
              <Route path="/" element={<h1>home</h1>} />
             <Route path="/about" element={<h1>about</h1>} />
             <Route path="/login" element={<h1>login</h1>} />
+            <Route path="/college" element={<CollegeForNav />} />
+
+
             <Route path="/*" element={<PageNotFound />} />
 
          </Routes>
@@ -1907,6 +1939,7 @@ function App(){
         </>
     )
 }
+
 
 
 

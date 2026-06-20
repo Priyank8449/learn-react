@@ -22,6 +22,10 @@ export default function Navbar2(){
                  <Link to="/about" className="link">about</Link>
 
                 </li>
+                <li>
+                 <Link to="/college" className="link">college</Link>
+
+                </li>
             </ul>
         </div>
         </div>
