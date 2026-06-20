@@ -21,6 +21,7 @@ import { useFormStatus } from "react-dom";
 import AddUser from "./AddUser";
 import DisplayUser from "./DisplayUser";
 import useToggle from "./useToggle";
+import Navbar from "./navbar";
 
 // import Login, { Username } from './user'
 
@@ -1836,16 +1837,16 @@ import useToggle from "./useToggle";
 
 // import { BrowserRouter , Routes,Route,Link} from "react-router";
 
-// // react router 7 setup 
+// // // react router 7 setup 
+
+// import Navbar2 from "./navbar";
 
 // function App(){
 //     return(
 //         <>
 //         <BrowserRouter>
-
-//         <Link to="/"> home</Link>
-//         <Link to="/about"> about</Link>
-//         <Link to="contact"> contact</Link>
+// <Navbar2 />
+        
 //         <Routes>
 //             <Route path="/" element={<h1>home</h1>} />
 //             <Route path="/about" element={<h1>about</h1>} />
@@ -1856,7 +1857,11 @@ import useToggle from "./useToggle";
 //         </>
 //     )
 // }
-// basics pages using react router 
+
+
+
+
+// header with  react  router
 
 
 
