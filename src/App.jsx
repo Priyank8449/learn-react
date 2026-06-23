@@ -2174,5 +2174,8 @@ import { UserDetail } from "./userDetail";
 
 
 
-// installing tailwind css 
-export default App;
+// installing tailwind css in react
+
+
+
+export default App
