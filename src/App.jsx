@@ -1836,7 +1836,7 @@ import Detail from "./detail";
 //     )
 // }
 
-import {  Routes,Route,Link} from "react-router";
+import { Routes, Route, Link } from "react-router";
 
 // // // react router 7 setup 
 
@@ -1846,7 +1846,7 @@ import {  Routes,Route,Link} from "react-router";
 //         <>
 //         <BrowserRouter>
 // <Navbar2 />
-        
+
 //         <Routes>
 //             <Route path="/" element={<h1>home</h1>} />
 //             <Route path="/about" element={<h1>about</h1>} />
@@ -1868,7 +1868,7 @@ import {  Routes,Route,Link} from "react-router";
 //         <>
 
 //         <BrowserRouter>
-        
+
 //         <Navbar2 />
 
 //          <Routes>
@@ -1894,7 +1894,7 @@ import Department from "./department";
 //         <>
 
 //         <BrowserRouter>
-        
+
 //         <Navbar2 />
 
 //          <Routes>
@@ -1917,34 +1917,77 @@ import Department from "./department";
 // nested navigation 
 
 // import CollegeForNav from "./collegeforNav";
-function App(){
-    return(
-        <>
+// function App(){
+//     return(
+//         <>
 
-        <BrowserRouter>
-        
-        <Navbar2 />
+//         <BrowserRouter>
 
-         <Routes>
-             <Route path="/" element={<h1>home</h1>} />
-            <Route path="/about" element={<h1>about</h1>} />
-            <Route path="/login" element={<h1>login</h1>} />
-            <Route path="/college" element={<CollegeForNav />} >
-            <Route path="department" element={<Department />}/>
-            <Route path="detail" element={<Detail />}/>
-            </Route>
+//         <Navbar2 />
 
-
-            <Route path="/*" element={<PageNotFound />} />
-
-         </Routes>
-
-        </BrowserRouter>
-        </>
-    )
-}
+//          <Routes>
+//              <Route path="/" element={<h1>home</h1>} />
+//             <Route path="/about" element={<h1>about</h1>} />
+//             <Route path="/login" element={<h1>login</h1>} />
+//             <Route path="/college" element={<CollegeForNav />} >
+//             <Route path="department" element={<Department />}/>
+//             <Route path="detail" element={<Detail />}/>
+//             </Route>
 
 
+//             <Route path="/*" element={<PageNotFound />} />
+
+//          </Routes>
+
+//         </BrowserRouter>
+//         </>
+//     )
+// }
+
+
+
+// layout routes and index routes
+
+// function App() {
+//     return (
+//         <>
+
+//             <BrowserRouter>
+
+//                 {/* <Navbar2 /> */}
+
+//                 <Routes>
+
+//                     <Route element={<Navbar2 />}>
+//                         <Route path="/" element={<h1>home</h1>} />
+//                         <Route path="/about" element={<h1>about</h1>} />
+//                         <Route path="/login" element={<h1>login</h1>} />
+
+//                     </Route>
+
+//                     <Route path="/" element={<h1>home</h1>} />
+//                     <Route path="/about" element={<h1>about</h1>} />
+//                     <Route path="/login" element={<h1>login</h1>} />
+//                     <Route path="/college" element={<CollegeForNav />} >
+//                         <Route index element={<Department />} />
+//                         <Route path="detail" element={<Detail />} />
+//                     </Route>
+
+
+//                     <Route path="/*" element={<PageNotFound />} />
+
+//                 </Routes>
+
+//             </BrowserRouter>
+//         </>
+//     )
+// }
+
+
+
+
+
+// route  prefix 
 
 
 export default App;
