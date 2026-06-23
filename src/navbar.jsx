@@ -1,4 +1,5 @@
-import { Link, Outlet } from "react-router";
+import {  Outlet } from "react-router";
+import { NavLink } from "react-router";
 
 import './header.css'
 export default function Navbar2(){
@@ -7,33 +8,33 @@ export default function Navbar2(){
 
         <div className="header">
         <div>
-            <Link to={"/"} className="link"><h2>Logo</h2></Link>
+            <NavLink to={"/"} className="link"><h2>Logo</h2></NavLink>
         </div>
 
         <div>
             <ul>
                 <li>
-                 <Link to="/" className="link">Home</Link>
+                 <NavLink to="/" className="link">Home</NavLink>
 
                 </li>
                 <li>
-                 <Link to="/in/user/login" className="link">login</Link>
+                 <NavLink to="/in/user/login" className="link">login</NavLink>
 
                 </li>
                 <li>
-                 <Link to="/in/user/about" className="link">about</Link>
+                 <NavLink to="/in/user/about" className="link">about</NavLink>
 
                 </li>
                 <li>
-                 <Link to="/college" className="link">college</Link>
+                 <NavLink to="/college" className="link">college</NavLink>
 
                 </li>
                 <li>
-                 <Link to="/users" className="link">users</Link>
+                 <NavLink to="/users" className="link">users</NavLink>
 
                 </li>
                 <li>
-                 <Link to="/users/list" className="link">list</Link>
+                 <NavLink to="/users/list" className="link">list</NavLink>
 
                 </li>
             </ul>
@@ -44,6 +45,6 @@ export default function Navbar2(){
     )
 }
 
-// Link to="/"> home</Link>
-//         <Link to="/about"> about</Link>
-//         <Link to="contact"> contact</Link>
+// NavLink to="/"> home</NavLink>
+//         <NavLink to="/about"> about</NavLink>
+//         <NavLink to="contact"> contact</NavLink>
