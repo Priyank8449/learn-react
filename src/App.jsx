@@ -1888,6 +1888,7 @@ import { Routes, Route, Link } from "react-router";
 import PageNotFound from './pagenotfound'
 import CollegeForNav from "./collegeforNav";
 import Department from "./department";
+import UserList from "./userList";
 
 // function App(){
 //     return(
@@ -2001,6 +2002,52 @@ import Department from "./department";
 
 //                     <Route element={<Navbar2 />}>
 //                         <Route path="/" element={<h1>home</h1>} />
+
+//                         <Route path="in">
+//                             <Route path="/in/user">
+
+//                                 <Route path="/in/user/about" element={<h1>about</h1>} />
+//                                 <Route path="/in/user/login" element={<h1>login</h1>} />
+
+//                             </Route>
+//                         </Route>
+//                     </Route>
+
+
+//                     <Route path="/college" element={<CollegeForNav />} >
+//                         <Route index element={<Department />} />
+//                         <Route path="detail" element={<Detail />} />
+//                     </Route>
+
+
+//                     <Route path="/*" element={<PageNotFound />} />
+
+//                 </Routes>
+
+//             </BrowserRouter>
+//         </>
+//     )
+// }
+
+
+
+
+// import { UserDetail } from "./userDetail";
+// // dynamic route 
+// function App() {
+//     return (
+//         <>
+
+//             <BrowserRouter>
+
+//                 {/* <Navbar2 /> */}
+
+//                 <Routes>
+
+//                     <Route element={<Navbar2 />}>
+//                         <Route path="/" element={<h1>home</h1>} />
+//                         <Route path="/users" element={<UserList /> } />
+//                         <Route path="/users/:id" element={<UserDetail /> } />
 
 //                         <Route path="in">
 //                             <Route path="/in/user">

@@ -28,6 +28,10 @@ export default function Navbar2(){
                  <Link to="/college" className="link">college</Link>
 
                 </li>
+                <li>
+                 <Link to="/users" className="link">users</Link>
+
+                </li>
             </ul>
         </div>
         </div>
