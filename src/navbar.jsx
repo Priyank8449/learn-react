@@ -17,11 +17,11 @@ export default function Navbar2(){
 
                 </li>
                 <li>
-                 <Link to="/login" className="link">login</Link>
+                 <Link to="/in/user/login" className="link">login</Link>
 
                 </li>
                 <li>
-                 <Link to="/about" className="link">about</Link>
+                 <Link to="/in/user/about" className="link">about</Link>
 
                 </li>
                 <li>
