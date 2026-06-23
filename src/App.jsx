@@ -2191,4 +2191,59 @@ import { UserDetail } from "./userDetail";
 
 
 
+
+
+// Api   
+
+// fetch  data from api with get method 
+
+import React from 'react'
+
+const App = () => {
+
+
+
+    const [usersData,setUsersData]=useState([
+
+    ])
+    useEffect(() => {
+        getUsersData()
+    }, [])
+
+    async function getUsersData() {
+        const url = "https://dummyjson.com/users"
+        let response = await fetch(url)
+        response = await response.json()
+        
+        setUsersData(response.users)
+    }
+
+
+    return (
+        <div>
+            
+            <h2>fetch data from api </h2>
+
+
+<ul className="flex justify-evenly text-3xl border-2 font-extrabold p-2 m-4">
+    <li>FirstName </li>
+    <li>LastName </li>
+    <li>Age</li>
+</ul>
+            {
+                usersData && usersData.map((user)=>(
+
+<ul className="flex justify-evenly border-2 m-4 p-2">
+    <li >{user.firstName}</li>
+    <li>{user.lastName}</li>
+    <li>{user.age}</li>
+</ul>
+                ))
+            }
+        </div>
+    )
+}
+
 export default App
+
+
