@@ -32,6 +32,10 @@ export default function Navbar2(){
                  <Link to="/users" className="link">users</Link>
 
                 </li>
+                <li>
+                 <Link to="/users/list" className="link">list</Link>
+
+                </li>
             </ul>
         </div>
         </div>

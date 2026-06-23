@@ -2032,7 +2032,7 @@ import UserList from "./userList";
 
 
 
-// import { UserDetail } from "./userDetail";
+import { UserDetail } from "./userDetail";
 // // dynamic route 
 // function App() {
 //     return (
@@ -2074,6 +2074,54 @@ import UserList from "./userList";
 //         </>
 //     )
 // }
+
+
+// react  router optional  segment 
+
+// function App() {
+//     return (
+//         <>
+
+//             <BrowserRouter>
+
+//                 {/* <Navbar2 /> */}
+
+//                 <Routes>
+
+//                     <Route element={<Navbar2 />}>
+//                         <Route path="/" element={<h1>home</h1>} />
+//                         <Route path="/users/list?" element={<UserList /> } />
+
+
+//                         <Route path="/users/:id/:name?" element={<UserDetail /> } />
+
+//                         <Route path="in">
+//                             <Route path="/in/user">
+
+//                                 <Route path="/in/user/about" element={<h1>about</h1>} />
+//                                 <Route path="/in/user/login" element={<h1>login</h1>} />
+
+//                             </Route>
+//                         </Route>
+//                     </Route>
+
+
+//                     <Route path="/college" element={<CollegeForNav />} >
+//                         <Route index element={<Department />} />
+//                         <Route path="detail" element={<Detail />} />
+//                     </Route>
+
+
+//                     <Route path="/*" element={<PageNotFound />} />
+
+//                 </Routes>
+
+//             </BrowserRouter>
+//         </>
+//     )
+// }
+
+
 
 
 export default App;

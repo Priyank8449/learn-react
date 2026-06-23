@@ -21,7 +21,9 @@ const UserList = () => {
         },
     ]
   return (
-    <div><h1>user-list</h1>
+    <div>
+        
+        <h1>user-list</h1>
     
     {
         userData.map((item)=>{
@@ -29,6 +31,19 @@ const UserList = () => {
 
                 <div>
                 <h2><Link to={"/users/"+ item.id}
+                 >{item.name}</Link></h2>
+            </div>
+                )
+        }) 
+    }
+        <h1>user-list</h1>
+    
+    {
+        userData.map((item)=>{
+            return(
+
+                <div>
+                <h2><Link to={"/users/"+ item.id+"/"+item.name}
                  >{item.name}</Link></h2>
             </div>
                 )
