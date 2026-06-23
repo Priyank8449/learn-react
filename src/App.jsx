@@ -2176,6 +2176,19 @@ import { UserDetail } from "./userDetail";
 
 // installing tailwind css in react
 
+// import React from 'react'
+
+// const App = () => {
+//   return (
+//     <div>
+//         <h1 class="text-3xl border-4 m-4 rounded-4xl p-4 underline bg-amber-600 font-bold ">
+//     Hello world!
+//   </h1>
+//     </div>
+//   )
+// }
+
+
 
 
 export default App
