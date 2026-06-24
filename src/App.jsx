@@ -2252,47 +2252,98 @@ import { UserDetail } from "./userDetail";
 
 
 
-import React from 'react'
+// import React from 'react'
 
-const App = () => {
+// const App = () => {
 
 
-    const [userData,setUsersData]=useState([])
+//     const [userData,setUsersData]=useState([])
 
-    const[loading,setloading]=useState(false)
-    useEffect(()=>{
-        setloading(true)
-        getUserData()
-    },[])
+//     const[loading,setloading]=useState(false)
+//     useEffect(()=>{
+//         setloading(true)
+//         getUserData()
+//     },[])
 
-    const getUserData= async ()=>{
-        const  url="http://localhost:3000/user"
-let  response=await fetch(url)
-        response=await response.json()
+//     const getUserData= async ()=>{
+//         const  url="http://localhost:3000/user"
+// let  response=await fetch(url)
+//         response=await response.json()
 
-        console.log(response)
-        setUsersData(response)
-        setloading(false)
-    }
-  return (
-    <div>
-        <h1>integrate json server api and loader</h1>
+//         console.log(response)
+//         setUsersData(response)
+//         setloading(false)
+//     }
+//   return (
+//     <div>
+//         <h1>integrate json server api and loader</h1>
 
-        {
+//         {
 
-            !loading?
-            userData.map((user)=>(
-                <div key={user.id}>
+//             !loading?
+//             userData.map((user)=>(
+//                 <div key={user.id}>
 
-            <h3 >{user.name}</h3>
-                </div>
-            ))
-            :<h1>Data loading</h1>
-        }
+//             <h3 >{user.name}</h3>
+//                 </div>
+//             ))
+//             :<h1>Data loading</h1>
+//         }
         
-    </div>
-  )
-}
+//     </div>
+//   )
+// }
+
+
+
+
+
+
+
+
+
+
+// route foruser list  and add  user ui 
+
+
+
+// import React from 'react'
+// import { NavLink } from "react-router";
+// import UserAdd from "./useAdd";
+// import UserListforapi from "./userListforapi";
+
+// const App = () => {
+
+//   return (
+//     <div>
+
+//         <ul className="flex justify-center space-x-5">
+//             <li className="">
+//                 <NavLink to="/">User list </NavLink>
+//             </li>
+//             <li className="">
+//                 <NavLink to="/add">Add user</NavLink>
+//             </li>
+//         </ul>
+
+//            <h1>make route and pages for add user list ui </h1>
+
+
+//            <Routes>
+
+//             <Route  path="/" element={<UserListforapi />}/>
+//             <Route  path="/add" element={<UserAdd />}/>
+//            </Routes>
+//     </div>
+
+//   )
+// }
+
+
+
+
+// integrate post method api 
+
 
 export default App
 
