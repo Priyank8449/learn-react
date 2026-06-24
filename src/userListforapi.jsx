@@ -1,9 +1,11 @@
 
 import React from 'react'
  import { useState ,useEffect  } from 'react'
+ import {  useNavigate } from 'react-router'
 
 const UserListforapi = () => {
 
+    const navigate=useNavigate()
 
     const [userData,setUsersData]=useState([])
 
@@ -36,6 +38,10 @@ let  response=await fetch(url)
         }
 
     }
+const editUser=(id)=>{
+navigate("/edit/"+id)
+}
+
   return (
     <div className='h-[500px] text-center relative border-2 m-2 overflow-scroll' >
 
@@ -59,7 +65,10 @@ let  response=await fetch(url)
             '>{user.email}</div></li>
             <li><div></div>{user.age}</li>
             <li><div>
-               <button onClick={()=>deleteUser(user.id)}className='border-2 p-1 bg-red-200'>Delete</button></div></li> 
+               <button onClick={()=>deleteUser(user.id)}className='border-2 p-1 bg-red-200'>Delete</button>
+               <button onClick={()=>editUser(user.id)}className='border-2 p-1 bg-yellow-200'>Edit</button>
+               
+               </div></li> 
            </ul>
                 </div>
             ))
