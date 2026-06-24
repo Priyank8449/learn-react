@@ -2344,6 +2344,39 @@ import { UserDetail } from "./userDetail";
 
 // integrate post method api 
 
+import React from 'react'
+import { NavLink } from "react-router";
+import UserAdd from "./useAdd";
+import UserListforapi from "./userListforapi";
+
+const App = () => {
+
+  return (
+    <div>
+
+        <ul className="flex justify-center space-x-5">
+            <li className="">
+                <NavLink to="/">User list </NavLink>
+            </li>
+            <li className="">
+                <NavLink to="/add">Add user</NavLink>
+            </li>
+        </ul>
+
+           <h1>make route and pages for add user list ui </h1>
+
+
+           <Routes>
+
+            <Route  path="/" element={<UserListforapi />}/>
+            <Route  path="/add" element={<UserAdd />}/>
+           </Routes>
+    </div>
+
+  )
+}
+
+
 
 export default App
 
