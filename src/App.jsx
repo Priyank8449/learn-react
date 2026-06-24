@@ -2033,6 +2033,7 @@ import UserList from "./userList";
 
 
 import { UserDetail } from "./userDetail";
+import js from "@eslint/js";
 // // dynamic route 
 // function App() {
 //     return (
@@ -2458,6 +2459,58 @@ import { UserDetail } from "./userDetail";
 // 
 
 
+// simple validation in  react js
+
+import React from 'react'
+import "./App.css"
+
+const App = () => {
+
+    const [name,setName]=useState("")
+    const[nameErr,setNameErr]=useState()
+    const [pass,setPass]=useState("")
+    const[passErr,setPassErr]=useState()
+
+    const handleName=(event)=>{
+
+        // console.log(event.target.value);
+        if(event.target.value.length>7){
+            setNameErr("enter valid user name 7  char  allowed")
+        }
+        else{
+            setNameErr()
+        }
+
+    }
+
+    const  handlePass=()=>{
+ let regex=/^[A-Z0-9]+$/i
+        // console.log(event.target.value);
+        if(regex.test(event.target.value)){
+            setPassErr()
+        }
+        else{
+            setPassErr("pls ENTER valid pass only alphabet  and number allowed")
+        }
+
+    }
+  return (
+    <div className="  flex flex-col m-2">
+        <input className={nameErr?'error':' m-2 border-2 w-[200px]'
+        } type="text" onChange={handleName} placeholder="enter name" />
+        <span>{nameErr && nameErr}  </span>
+        <input onChange={handlePass} className="border-2 m-2 w-[200px]" type="text" placeholder="enter pass" />
+        <span>{passErr && passErr}  </span>
+
+        <button  disabled={passErr || nameErr} className="border-2 m-2 w-[200px]"> login </button>
+    </div>
+  )
+}
+
 export default App
 
+
+
+
+// validation with useAction state in react 
 

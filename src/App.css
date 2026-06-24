@@ -209,3 +209,13 @@ button:disabled {
     transform: rotate(360deg);
   }
 }
+
+
+.error{
+  border:1px solid red;
+    width: 200px;
+}
+
+.error:focus{
+  outline: 2px solid red;
+}
