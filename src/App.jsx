@@ -2215,14 +2215,14 @@ import js from "@eslint/js";
 //         const url = "https://dummyjson.com/users"
 //         let response = await fetch(url)
 //         response = await response.json()
-        
+
 //         setUsersData(response.users)
 //     }
 
 
 //     return (
 //         <div>
-            
+
 //             <h2>fetch data from api </h2>
 
 
@@ -2290,7 +2290,7 @@ import js from "@eslint/js";
 //             ))
 //             :<h1>Data loading</h1>
 //         }
-        
+
 //     </div>
 //   )
 // }
@@ -2461,56 +2461,102 @@ import js from "@eslint/js";
 
 // simple validation in  react js
 
-import React from 'react'
-import "./App.css"
+// import React from 'react'
+// import "./App.css"
 
-const App = () => {
+// const App = () => {
 
-    const [name,setName]=useState("")
-    const[nameErr,setNameErr]=useState()
-    const [pass,setPass]=useState("")
-    const[passErr,setPassErr]=useState()
+//     const [name,setName]=useState("")
+//     const[nameErr,setNameErr]=useState()
+//     const [pass,setPass]=useState("")
+//     const[passErr,setPassErr]=useState()
 
-    const handleName=(event)=>{
+//     const handleName=(event)=>{
 
-        // console.log(event.target.value);
-        if(event.target.value.length>7){
-            setNameErr("enter valid user name 7  char  allowed")
-        }
-        else{
-            setNameErr()
-        }
+//         // console.log(event.target.value);
+//         if(event.target.value.length>7){
+//             setNameErr("enter valid user name 7  char  allowed")
+//         }
+//         else{
+//             setNameErr()
+//         }
 
-    }
+//     }
 
-    const  handlePass=()=>{
- let regex=/^[A-Z0-9]+$/i
-        // console.log(event.target.value);
-        if(regex.test(event.target.value)){
-            setPassErr()
-        }
-        else{
-            setPassErr("pls ENTER valid pass only alphabet  and number allowed")
-        }
+//     const  handlePass=()=>{
+//  let regex=/^[A-Z0-9]+$/i
+//         // console.log(event.target.value);
+//         if(regex.test(event.target.value)){
+//             setPassErr()
+//         }
+//         else{
+//             setPassErr("pls ENTER valid pass only alphabet  and number allowed")
+//         }
 
-    }
-  return (
-    <div className="  flex flex-col m-2">
-        <input className={nameErr?'error':' m-2 border-2 w-[200px]'
-        } type="text" onChange={handleName} placeholder="enter name" />
-        <span>{nameErr && nameErr}  </span>
-        <input onChange={handlePass} className="border-2 m-2 w-[200px]" type="text" placeholder="enter pass" />
-        <span>{passErr && passErr}  </span>
+//     }
+//   return (
+//     <div className="  flex flex-col m-2">
+//         <input className={nameErr?'error':' m-2 border-2 w-[200px]'
+//         } type="text" onChange={handleName} placeholder="enter name" />
+//         <span>{nameErr && nameErr}  </span>
+//         <input onChange={handlePass} className="border-2 m-2 w-[200px]" type="text" placeholder="enter pass" />
+//         <span>{passErr && passErr}  </span>
 
-        <button  disabled={passErr || nameErr} className="border-2 m-2 w-[200px]"> login </button>
-    </div>
-  )
-}
+//         <button  disabled={passErr || nameErr} className="border-2 m-2 w-[200px]"> login </button>
+//     </div>
+//   )
+// }
 
-export default App
+// export default App
 
 
 
 
 // validation with useAction state in react 
 
+// import React from 'react'
+
+// const App = () => {
+
+//     const handleLogin=(prevData,formData)=>{
+
+//         let name=formData.get('name')
+//         let pass=formData.get('pass')
+
+//         let regex=/^[A-Z0-9]+$/i;
+
+//         if(!name || name.length>5){
+// return {error:"name sholud not contain  more than 5 char",name,pass}
+//         }else if(!regex.test(pass)){
+// return {error:"password can  contain numbers and alpha",name,pass}
+
+//         }else{
+// return{message:"login done",name,pass}
+//         }
+
+//     }
+
+//     const[data,action,pending]=useActionState(handleLogin)
+
+//     return (
+//         <div>
+//             <h1>validation with useActionState </h1>
+
+// {
+//     data?.message && <span className="text-green-400">{data?.message}</span>
+// }
+// {
+// data?.error && <span className="text-red-600">{data?.error}</span>
+// }
+//             <form className="m-4 outline-2" action={action}>
+//                 <input className="outline-1" defaultValue={data?.name} type="text" name="name" placeholder="enter user name" />
+//                 <br /> <br />
+//                 <input className="outline-1" defaultValue={data?.pass} type="text" name="pass" placeholder="enter password" />
+//                 <br /> <br />
+//                 <button className=" rounded-2 m-2 border-2 bg-amber-200" >login</button>
+//             </form>
+//         </div>
+//     )
+// }
+
+export default App
