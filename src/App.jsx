@@ -6,7 +6,7 @@
 
 // import Header from './Header'
 
-import { Fragment, use, useActionState, useEffect, useState, useTransition } from "react";
+import { Fragment, use, useActionState, useEffect, useReducer, useState, useTransition } from "react";
 import { College, Student, Nuser, Wrapper, User2 } from "./user";
 import User from "./user";
 import Clock from "./clock";
@@ -2557,6 +2557,63 @@ import js from "@eslint/js";
 //             </form>
 //         </div>
 //     )
+// }
+
+
+
+// useReducer hook 
+
+
+
+
+// import React from 'react'
+
+
+
+//     const emptyData={
+//         name:"",
+//         pass:"",
+//         email:"",
+//         city:"",
+//         add:"",
+
+//     }
+
+//     const reducer=(data,action)=>{
+//         console.log(data,action)
+//         return{...data,[action.type]:action.val}
+
+//     }
+
+// const App = () => {
+
+
+
+//     const [state,dispatch]=useReducer(reducer,emptyData)
+
+//     console.log(state)
+//   return (
+//     <div>
+//         <h1>use reducer</h1>
+//         <input type="text" onChange={()=>dispatch({val:event.target.value,type:"name"})} placeholder="enter name"/><br /><br />
+//         <input type="text" onChange={()=>dispatch({val:event.target.value,type:"pass"})} placeholder="enter pass"/><br /><br />
+//         <input type="text" onChange={()=>dispatch({val:event.target.value,type:"email"})} placeholder="enter email"/><br /><br />
+//         <input type="text" onChange={()=>dispatch({val:event.target.value,type:"city"})} placeholder="enter city"/><br /><br />
+//         <input type="text" onChange={()=>dispatch({val:event.target.value,type:"add"})} placeholder="enter add"/><br /><br />
+
+//         <button> add details</button>
+
+
+
+//         <ul>
+//             <li>name:{state.name}</li>
+//             <li>pass:{state.pass}</li>
+//             <li>email:{state.email}</li>
+//             <li>city:{state.city}</li>
+//             <li>add:{state.add}</li>
+//         </ul>
+//     </div>
+//   )
 // }
 
 export default App
