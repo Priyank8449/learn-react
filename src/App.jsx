@@ -2640,3 +2640,41 @@ import js from "@eslint/js";
 // }
 
 // export default App
+
+
+// "use" API in reacct js 19
+
+import React from 'react'
+
+const  fetchData=()=>fetch('https://dummyjson.com/users').then((response)=>response.json())
+const userResource=fetchData()
+
+
+const App = () => {
+  return (
+    <div>
+        <Suspense fallback={<p>loading...</p>}><Ussers userResource={userResource}/></Suspense>
+    </div>
+  )
+}
+
+export default App
+
+
+const Ussers =({userResource})=>{
+
+    const userData=use(userResource)
+    return(<>
+
+    <div>
+        {
+            userData?.users?.map((user)=>(
+                <h1>{user.firstName}</h1>
+            ))
+        }
+    </div>
+        <h1>users list </h1>
+
+    </>
+    )
+}
