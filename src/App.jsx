@@ -6,7 +6,7 @@
 
 // import Header from './Header'
 
-import { Fragment, use, useActionState, useEffect, useReducer, useState, useTransition } from "react";
+import { Fragment, lazy, Suspense, use, useActionState, useEffect, useReducer, useState, useTransition } from "react";
 import { College, Student, Nuser, Wrapper, User2 } from "./user";
 import User from "./user";
 import Clock from "./clock";
@@ -2616,4 +2616,27 @@ import js from "@eslint/js";
 //   )
 // }
 
-export default App
+
+
+// lazy loading   increase performance speed
+
+
+// import React from 'react'
+// const Time=lazy(()=>import('./Clock'))
+
+
+// const App = () => {
+//     const [load,setLoad]=useState(false)
+//   return (
+//     <div className="m-12">
+//         {
+//             load? <Suspense fallback={<h3>loading....</h3>}><Time /></Suspense>:null
+//         }
+
+// <button className="outline-2 " onClick={()=>setLoad(true)}>load clock</button>
+
+//     </div>
+//   )
+// }
+
+// export default App
