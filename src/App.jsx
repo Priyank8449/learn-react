@@ -2644,37 +2644,81 @@ import js from "@eslint/js";
 
 // "use" API in reacct js 19
 
-import React from 'react'
+// import React from 'react'
 
-const  fetchData=()=>fetch('https://dummyjson.com/users').then((response)=>response.json())
-const userResource=fetchData()
-
-
-const App = () => {
-  return (
-    <div>
-        <Suspense fallback={<p>loading...</p>}><Ussers userResource={userResource}/></Suspense>
-    </div>
-  )
-}
-
-export default App
+// const  fetchData=()=>fetch('https://dummyjson.com/users').then((response)=>response.json())
+// const userResource=fetchData()
 
 
-const Ussers =({userResource})=>{
+// const App = () => {
+//   return (
+//     <div>
+//         <Suspense fallback={<p>loading...</p>}><Ussers userResource={userResource}/></Suspense>
+//     </div>
+//   )
+// }
 
-    const userData=use(userResource)
-    return(<>
+// export default App
 
-    <div>
-        {
-            userData?.users?.map((user)=>(
-                <h1>{user.firstName}</h1>
-            ))
-        }
-    </div>
-        <h1>users list </h1>
 
-    </>
-    )
-}
+// const Ussers =({userResource})=>{
+
+//     const userData=use(userResource)
+//     return(<>
+
+//     <div>
+//         {
+//             userData?.users?.map((user)=>(
+//                 <h1>{user.firstName}</h1>
+//             ))
+//         }
+//     </div>
+//         <h1>users list </h1>
+
+//     </>
+//     )
+// }
+
+
+// mini project 
+
+// import React from 'react'
+
+// const App = () => {
+
+//     const colors=JSON.parse(localStorage.getItem("color"))
+//    const[r,setR]=useState(colors && colors.r?colors.r:0)
+//     const[g,setG]=useState(colors && colors.g?colors.g:0)
+//     const[b,setB]=useState(colors && colors.b?colors.b:0)
+
+//     const save=()=>{
+//         console.log("saved")
+//         localStorage.setItem("color",JSON.stringify({r,g,b}))
+//     }
+//   return (
+//     <div>
+//         <h1>color mixer</h1>
+
+
+//         <div style={{backgroundColor:'rgb('+r+' ,'+g+','+b+')' , height:"200px", width:"200px"}}>
+
+//         </div>
+
+//         <label htmlFor="">red</label>
+//         <input type="range" onChange={(event)=>setR(event.target.value)} value={r}  min={0} max={255} />
+//         <br /><br />
+//         <label htmlFor="">green</label>
+//         <input type="range"  onChange={(event)=>setG(event.target.value)} value={g} min={0} max={255} />
+//         <br /><br />
+//         <label htmlFor="">blue</label>
+//         <input type="range"  onChange={(event)=>setB(event.target.value)}  value={b} min={0} max={255} />
+//         <br /><br />
+
+//         <button onClick={save}>save color combo</button>
+
+
+//     </div>
+//   )
+// }
+
+// export default App
