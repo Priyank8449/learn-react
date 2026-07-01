@@ -309,7 +309,7 @@ import Detail from "./detail";
 // get  input field value
 
 // function App() {
-//     const [val, setVal] = useState("priyank")
+//     const [val, setVal] = useState("")
 //     return (
 //         <div>
 //             <h1>get input field value </h1>
@@ -2721,7 +2721,7 @@ import js from "@eslint/js";
 //   )
 // }
 
-// export default App
+export default App
 
 
 
