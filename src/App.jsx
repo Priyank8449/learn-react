@@ -702,49 +702,49 @@ import Detail from "./detail";
 // useEffect  hooks . with useState
 
 
-// function App() {
-//     const [counter, setCounter] = useState(0);
-//     const [data, setData] = useState(0);
+function App() {
+    const [counter, setCounter] = useState(0);
+    const [data, setData] = useState(0);
 
-//     // callOnce();
+    // callOnce();
 
-//     useEffect(()=>{
+    // useEffect(()=>{
+    //     // callOnce()
+    //     counterFunc()
+    // },[])
+
+
+    // printing twice because of react strict mode which  renders the component twice 
+
+
+// useEffect(()=>{
 //         // callOnce()
 //         counterFunc()
-//     },[])
+//     },[counter])
+    useEffect(()=>{
+        // callOnce()
+        counterFunc()
+    },[counter,data])
 
 
-//     // printing twice because of react strict mode which  renders the component twice 
+    function callOnce() {
+        console.log("callonce called ",{counter})
+    }
 
-
-//     // useEffect(()=>{
-//     //     // callOnce()
-//     //     counterFunc()
-//     // },[counter])
-//     // useEffect(()=>{
-//     //     // callOnce()
-//     //     counterFunc()
-//     // },[counter,data])
-
-
-//     function callOnce() {
-//         console.log("callonce called ",{counter})
-//     }
-
-//     function counterFunc(){
-//         console.log("counter function ")
-//     }
+    function counterFunc(){
+        console.log("counter function ")
+    }
 
 
 
-//     return (
-//         <div>
-//             <h1>useEffect hooks</h1>
-//             <button onClick={() => setCounter(counter + 1)}>counter{counter}</button>
-//             <button onClick={() => setData(data + 1)}>data{data}</button>
-//         </div>
-//     )
-// }
+    return (
+        <div>
+            <h1>useEffect hooks</h1>
+            <button onClick={() => setCounter(counter + 1)}>counter{counter}</button>
+            <button onClick={() => setData(data + 1)}>data{data}</button>
+        </div>
+    )
+}
 
 
 
