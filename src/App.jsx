@@ -1084,7 +1084,6 @@ import Detail from "./detail";
 
 
 // // useRef hook  in  react js 
-// import { useRef } from "react";
 
 
 // function App(){
@@ -1116,7 +1115,7 @@ import Detail from "./detail";
 //         <div>
 //             <h1> useRef hooks in react </h1>
 //             <input  ref ={inputRef} type="text" placeholder="enter user name" />
-//             <button onClick={inputHandler}>focus on  inout field</button>
+//             <button onClick={inputHandler}>focus on  input field</button>
 
 
 //             <h1 ref={h1Ref}>hello i ama baba tillu   </h1>
@@ -1128,146 +1127,6 @@ import Detail from "./detail";
 
 
 
-
-
-// function App() {
-//   return (
-//     <>
-//       <style>
-//         {`
-//           @keyframes shine {
-//             from {
-//               transform: translateX(-400px) rotate(30deg);
-//             }
-//             to {
-//               transform: translateX(500px) rotate(30deg);
-//             }
-//           }
-
-//           @keyframes float {
-//             0%,100% {
-//               transform: translateY(0px);
-//             }
-//             50% {
-//               transform: translateY(-10px);
-//             }
-//           }
-
-//           .glass-card {
-//             animation: float 4s ease-in-out infinite;
-//           }
-
-//           .shine {
-//             animation: shine 4s linear infinite;
-//           }
-//         `}
-//       </style>
-
-//       <div
-//         style={{
-//           width: "100vw",
-//           height: "100vh",
-//           backgroundImage:
-//             "url('https://png.pngtree.com/background/20230520/original/pngtree-3d-planets-in-space-wallpapers-for-mobile-picture-image_2670749.jpg')",
-//           backgroundSize: "cover",
-//           backgroundPosition: "center",
-//           display: "flex",
-//           justifyContent: "center",
-//           alignItems: "center",
-//           overflow: "hidden",
-//         }}
-//       >
-//         <div
-//           className="glass-card"
-//           style={{
-//             width: "360px",
-//             height: "220px",
-//             position: "relative",
-//             overflow: "hidden",
-
-//             /* Liquid Glass */
-//             background:
-//               "linear-gradient(135deg, rgba(255, 255, 255, 0), rgba(255,255,255,0.05))",
-
-//             backdropFilter: "blur(10px) saturate(180%)",
-//             WebkitBackdropFilter: "blur(10px) saturate(180%)",
-
-//             border: "1px solid rgba(255,255,255,0.25)",
-//             borderRadius: "32px",
-
-//             boxShadow: `
-//               0 20px 50px rgba(0,0,0,0.25),
-//               inset 0 1px 1px rgba(255,255,255,0.8),
-//               inset 0 -1px 1px rgba(255,255,255,0.15)
-//             `,
-
-//             display: "flex",
-//             justifyContent: "center",
-//             alignItems: "center",
-//           }}
-//         >
-//           {/* Top Glow */}
-//           <div
-//             style={{
-//               position: "absolute",
-//               top: "-80px",
-//               left: "-40px",
-//               width: "250px",
-//               height: "250px",
-//               borderRadius: "50%",
-//               background:
-//                 "radial-gradient(circle, rgba(255,255,255,0.45), transparent 70%)",
-//               pointerEvents: "none",
-//             }}
-//           />
-
-//           {/* Bottom Glow */}
-//           <div
-//             style={{
-//               position: "absolute",
-//               bottom: "-100px",
-//               right: "-60px",
-//               width: "250px",
-//               height: "250px",
-//               borderRadius: "50%",
-//               background:
-//                 "radial-gradient(circle, rgba(255,255,255,0.15), transparent 70%)",
-//               pointerEvents: "none",
-//             }}
-//           />
-
-//           {/* Moving Shine */}
-//           <div
-//             className="shine"
-//             style={{
-//               position: "absolute",
-//               top: "-50%",
-//               left: "-100%",
-//               width: "80px",
-//               height: "300%",
-//               background:
-//                 "linear-gradient(to right, transparent, rgba(255,255,255,0.4), transparent)",
-//               pointerEvents: "none",
-//             }}
-//           />
-
-//           <h1
-//             style={{
-//               color: "white",
-//               fontSize: "2.5rem",
-//               fontWeight: "700",
-//               letterSpacing: "2px",
-//               textShadow: "0 2px 20px rgba(255,255,255,0.4)",
-//               zIndex: 2,
-//             }}
-//           >
-//             PRIYANK
-//           </h1>
-//         </div>
-//       </div>
-//     </>
-//   );
-// }
 
 
 
@@ -1349,25 +1208,25 @@ import Detail from "./detail";
 
 // ForwardRef in react 
 
-// function App(){
+function App(){
 
-//     const inputRef=useRef(null);
+    const inputRef=useRef(null);
 
-//     const updateInput=()=>{
-//         inputRef.current.value=1000;
-//         inputRef.current.focus();
-//         inputRef.current.style.color='blue';
-//     }
+    const updateInput=()=>{
+        inputRef.current.value=1000;
+        inputRef.current.focus();
+        inputRef.current.style.color='blue';
+    }
 
 
-//     return(
-//         <>
-//         <h1>forward ref</h1>
-//         <InputField ref={inputRef} />
-//         <button onClick={updateInput}>update input field</button>
-//         </>
-//     )
-// }
+    return(
+        <>
+        <h1>forward ref</h1>
+        <InputField ref={inputRef} />
+        <button onClick={updateInput}>update input field</button>
+        </>
+    )
+}
 
 
 
