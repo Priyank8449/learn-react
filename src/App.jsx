@@ -1208,25 +1208,25 @@ import Detail from "./detail";
 
 // ForwardRef in react 
 
-function App(){
+// function App(){
 
-    const inputRef=useRef(null);
+//     const inputRef=useRef(null);
 
-    const updateInput=()=>{
-        inputRef.current.value=1000;
-        inputRef.current.focus();
-        inputRef.current.style.color='blue';
-    }
+//     const updateInput=()=>{
+//         inputRef.current.value=1000;
+//         inputRef.current.focus();
+//         inputRef.current.style.color='blue';
+//     }
 
 
-    return(
-        <>
-        <h1>forward ref</h1>
-        <InputField ref={inputRef} />
-        <button onClick={updateInput}>update input field</button>
-        </>
-    )
-}
+//     return(
+//         <>
+//         <h1>forward ref</h1>
+//         <InputField ref={inputRef} />
+//         <button onClick={updateInput}>update input field</button>
+//         </>
+//     )
+// }
 
 
 
@@ -1268,7 +1268,7 @@ function App(){
 
 
 
-//useTransition hook in react js 
+// useTransition hook in react js 
 
 // function App(){
 //     const[pending ,setPending]=useState(false);
@@ -1455,7 +1455,7 @@ function App(){
 
 // const handleAge=(age)=>{
 // dataDetails[dataDetails.length-1].age=age
-// setDataDetails( [...data])
+// setDataDetails( [...dataDetails])
 // }
 //     return(
 //         <>
@@ -1463,7 +1463,6 @@ function App(){
 
 //         <input type="text" onChange={(event)=>handleName(event.target.value)} placeholder="enter last user name"/>
 
-//         <h2>{name}</h2>
 //         {
 //             data.map((item,index)=>(
 //                 <h3 key={index}>{item}</h3>
@@ -1474,9 +1473,9 @@ function App(){
 // <input type="text" onChange={(event)=>handleAge(event.target.value)} placeholder="enter last user age"/>
 
 // {
-//     dataDetails.map((items,index)=>{
+//     dataDetails.map((items,index)=>(
 //         <h3 key={index}>{items.name},{items.age}</h3>
-//     })
+//     ))
 // }
 
 
@@ -1556,29 +1555,31 @@ function App(){
 
 // }
 
-// // function  User5 (){
-// //     const  name = useId()
-// //     const  pass = useId()
-// //     const  skills = useId()
+// function  User5 (){
+//     const  name = useId()
+//     const  pass = useId()
+//     const  skills = useId()
 
-// //     return(
-// //         <>
-// // <form action="">
 
-// //     <label htmlFor={name}>name</label>
-// //     <input id={name} type="text" placeholder="enter name " />
 
-// //     <br />
-// //     <br />
-// //     <label htmlFor={pass}>password</label>
-// //     <input id={pass} type="text" placeholder="enter passs " />
-// // </form>
+//     return(
+//         <>
+// <form action="">
 
-// // <br />
-// //         </>
-// //     )
+//     <label htmlFor={name}>name</label>
+//     <input id={name} type="text" placeholder="enter name " />
 
-// // }
+//     <br />
+//     <br />
+//     <label htmlFor={pass}>password</label>
+//     <input id={pass} type="text" placeholder="enter passs " />
+// </form>
+
+// <br />
+//         </>
+//     )
+
+// }
 
 
 // // by this method we have to  write different id for every  item 
@@ -1703,7 +1704,6 @@ import { Routes, Route, Link } from "react-router";
 // function App(){
 //     return(
 //         <>
-//         <BrowserRouter>
 // <Navbar2 />
 
 //         <Routes>
@@ -1712,7 +1712,6 @@ import { Routes, Route, Link } from "react-router";
 //             <Route path="/contact" element={<h1>contact</h1>} />
 
 //         </Routes>
-//         </BrowserRouter>
 //         </>
 //     )
 // }
@@ -1726,18 +1725,16 @@ import { Routes, Route, Link } from "react-router";
 //     return(
 //         <>
 
-//         <BrowserRouter>
 
 //         <Navbar2 />
 
 //          <Routes>
 //              <Route path="/" element={<h1>home</h1>} />
-//             <Route path="/about" element={<h1>about</h1>} />
-//             <Route path="/login" element={<h1>login</h1>} />
+//             <Route path="/in/user/about" element={<h1>about</h1>} />
+//             <Route path="/in/user/login" element={<h1>login</h1>} />
 
 //          </Routes>
 
-//         </BrowserRouter>
 //         </>
 //     )
 // }
@@ -1745,7 +1742,7 @@ import { Routes, Route, Link } from "react-router";
 // 404 page and redirection
 
 import PageNotFound from './pagenotfound'
-import CollegeForNav from "./collegeforNav";
+// import CollegeForNav from "./collegeforNav";
 import Department from "./department";
 import UserList from "./userList";
 
@@ -1753,22 +1750,20 @@ import UserList from "./userList";
 //     return(
 //         <>
 
-//         <BrowserRouter>
 
 //         <Navbar2 />
 
 //          <Routes>
 //              <Route path="/" element={<h1>home</h1>} />
-//             <Route path="/about" element={<h1>about</h1>} />
+//             <Route path="in/user/about" element={<h1>about</h1>} />
 //             <Route path="/login" element={<h1>login</h1>} /> 
 
 
 //             <Route path="/*" element={<PageNotFound />} />
-//             <Route path="/*" element={<Navigate to="/" />} />
+//             {/* <Route path="/*" element={<Navigate to="/" />} /> */}
 
 //          </Routes>
 
-//         </BrowserRouter>
 //         </>
 //     )
 // }
@@ -1776,33 +1771,31 @@ import UserList from "./userList";
 
 // nested navigation 
 
-// import CollegeForNav from "./collegeforNav";
-// function App(){
-//     return(
-//         <>
-
-//         <BrowserRouter>
-
-//         <Navbar2 />
-
-//          <Routes>
-//              <Route path="/" element={<h1>home</h1>} />
-//             <Route path="/about" element={<h1>about</h1>} />
-//             <Route path="/login" element={<h1>login</h1>} />
-//             <Route path="/college" element={<CollegeForNav />} >
-//             <Route path="department" element={<Department />}/>
-//             <Route path="detail" element={<Detail />}/>
-//             </Route>
+import CollegeForNav from "./collegeforNav";
+function App(){
+    return(
+        <>
 
 
-//             <Route path="/*" element={<PageNotFound />} />
+        <Navbar2 />
 
-//          </Routes>
+         <Routes>
+             <Route path="/" element={<h1>home</h1>} />
+            <Route path="/about" element={<h1>about</h1>} />
+            <Route path="/login" element={<h1>login</h1>} />
+            <Route path="/college" element={<CollegeForNav />} >
+            <Route path="department" element={<Department />}/>
+            <Route path="detail" element={<Detail />}/>
+            </Route>
 
-//         </BrowserRouter>
-//         </>
-//     )
-// }
+
+            <Route path="/*" element={<PageNotFound />} />
+
+         </Routes>
+
+        </>
+    )
+}
 
 
 
