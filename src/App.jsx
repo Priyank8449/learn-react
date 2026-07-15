@@ -1884,8 +1884,8 @@ function App(){
 
 
 
-import { UserDetail } from "./userDetail";
-import js from "@eslint/js";
+// import { UserDetail } from "./userDetail";
+// import js from "@eslint/js";
 // // dynamic route 
 // function App() {
 //     return (
