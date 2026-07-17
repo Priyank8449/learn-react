@@ -1772,69 +1772,68 @@ import UserList from "./userList";
 // nested navigation 
 
 import CollegeForNav from "./collegeforNav";
-function App(){
-    return(
-        <>
+// function App(){
+//     return(
+//         <>
 
 
-        <Navbar2 />
+//         <Navbar2 />
 
-         <Routes>
-             <Route path="/" element={<h1>home</h1>} />
-            <Route path="/about" element={<h1>about</h1>} />
-            <Route path="/login" element={<h1>login</h1>} />
-            <Route path="/college" element={<CollegeForNav />} >
-            <Route path="department" element={<Department />}/>
-            <Route path="detail" element={<Detail />}/>
-            </Route>
+//          <Routes>
+//              <Route path="/" element={<h1>home</h1>} />
+//             <Route path="/about" element={<h1>about</h1>} />
+//             <Route path="/login" element={<h1>login</h1>} />
+
+//             <Route path="/college" element={<CollegeForNav />} >
+//                  <Route path="department" element={<Department />}/>
+//                  <Route path="detail" element={<Detail />}/>
+//             </Route>
 
 
-            <Route path="/*" element={<PageNotFound />} />
+//             <Route path="/*" element={<PageNotFound />} />
 
-         </Routes>
+//          </Routes>
 
-        </>
-    )
-}
+//         </>
+//     )
+// }
 
 
 
 // layout routes and index routes
 
-// function App() {
-//     return (
-//         <>
-
-//             <BrowserRouter>
-
-//                 {/* <Navbar2 /> */}
-
-//                 <Routes>
-
-//                     <Route element={<Navbar2 />}>
-//                         <Route path="/" element={<h1>home</h1>} />
-//                         <Route path="/about" element={<h1>about</h1>} />
-//                         <Route path="/login" element={<h1>login</h1>} />
-
-//                     </Route>
-
-//                     <Route path="/" element={<h1>home</h1>} />
-//                     <Route path="/about" element={<h1>about</h1>} />
-//                     <Route path="/login" element={<h1>login</h1>} />
-//                     <Route path="/college" element={<CollegeForNav />} >
-//                         <Route index element={<Department />} />
-//                         <Route path="detail" element={<Detail />} />
-//                     </Route>
+function App() {
+    return (
+        <>
 
 
-//                     <Route path="/*" element={<PageNotFound />} />
+                {/* <Navbar2 /> */}
 
-//                 </Routes>
+                <Routes>
 
-//             </BrowserRouter>
-//         </>
-//     )
-// }
+                    <Route element={<Navbar2 />}>
+                        <Route path="/" element={<h1>home</h1>} />
+                        <Route path="/about" element={<h1>about</h1>} />
+                        <Route path="/login" element={<h1>login</h1>} />
+
+                    </Route>
+
+                    <Route path="/" element={<h1>home</h1>} />
+                    <Route path="/about" element={<h1>about</h1>} />
+                    <Route path="/login" element={<h1>login</h1>} />
+                    <Route path="/college" element={<CollegeForNav />} >
+                        <Route index element={<Department />} />
+                        <Route path="detail" element={<Detail />} />
+                    </Route>
+
+
+                    <Route path="/*" element={<PageNotFound />} />
+
+                </Routes>
+
+        </>
+    )
+}
 
 
 
@@ -1846,7 +1845,6 @@ function App(){
 //     return (
 //         <>
 
-//             <BrowserRouter>
 
 //                 {/* <Navbar2 /> */}
 
@@ -1876,7 +1874,6 @@ function App(){
 
 //                 </Routes>
 
-//             </BrowserRouter>
 //         </>
 //     )
 // }
