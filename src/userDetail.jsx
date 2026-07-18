@@ -11,6 +11,14 @@ export const UserDetail = () => {
         <h1>user-detail</h1>
         <h2>user id is :{paramsData.id}</h2>
         <h3><Link to="/users">Back</Link></h3>
+
+        <hr />
+
+        <h1>user-detail</h1>
+        <h2>user name is :{paramsData.name}</h2>
+        <h3><Link to="/users">Back</Link></h3>
+
+        
     
     </div>
   )

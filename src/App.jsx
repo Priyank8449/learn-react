@@ -1802,38 +1802,38 @@ import CollegeForNav from "./collegeforNav";
 
 // layout routes and index routes
 
-function App() {
-    return (
-        <>
+// function App() {
+//     return (
+//         <>
 
 
-                {/* <Navbar2 /> */}
+//                 {/* <Navbar2 /> */}
 
-                <Routes>
+//                 <Routes>
 
-                    <Route element={<Navbar2 />}>
-                        <Route path="/" element={<h1>home</h1>} />
-                        <Route path="/about" element={<h1>about</h1>} />
-                        <Route path="/login" element={<h1>login</h1>} />
+//                     <Route element={<Navbar2 />}>
+//                         <Route path="/" element={<h1>home</h1>} />
+//                         <Route path="/about" element={<h1>about</h1>} />
+//                         <Route path="/login" element={<h1>login</h1>} />
 
-                    </Route>
+//                     </Route>
 
-                    <Route path="/" element={<h1>home</h1>} />
-                    <Route path="/about" element={<h1>about</h1>} />
-                    <Route path="/login" element={<h1>login</h1>} />
-                    <Route path="/college" element={<CollegeForNav />} >
-                        <Route index element={<Department />} />
-                        <Route path="detail" element={<Detail />} />
-                    </Route>
+//                     <Route path="/" element={<h1>home</h1>} />
+//                     <Route path="/about" element={<h1>about</h1>} />
+//                     <Route path="/login" element={<h1>login</h1>} />
+//                     <Route path="/college" element={<CollegeForNav />} >
+//                         <Route index element={<Department />} />
+//                         <Route path="detail" element={<Detail />} />
+//                     </Route>
 
 
-                    <Route path="/*" element={<PageNotFound />} />
+//                     <Route path="/*" element={<PageNotFound />} />
 
-                </Routes>
+//                 </Routes>
 
-        </>
-    )
-}
+//         </>
+//     )
+// }
 
 
 
@@ -1888,7 +1888,6 @@ import js from "@eslint/js";
 //     return (
 //         <>
 
-//             <BrowserRouter>
 
 //                 {/* <Navbar2 /> */}
 
@@ -1898,6 +1897,7 @@ import js from "@eslint/js";
 //                         <Route path="/" element={<h1>home</h1>} />
 //                         <Route path="/users" element={<UserList /> } />
 //                         <Route path="/users/:id" element={<UserDetail /> } />
+//                         <Route path="/users/:id/:name" element={<UserDetail /> } />
 
 //                         <Route path="in">
 //                             <Route path="/in/user">
@@ -1920,7 +1920,6 @@ import js from "@eslint/js";
 
 //                 </Routes>
 
-//             </BrowserRouter>
 //         </>
 //     )
 // }
@@ -1932,7 +1931,6 @@ import js from "@eslint/js";
 //     return (
 //         <>
 
-//             <BrowserRouter>
 
 //                 {/* <Navbar2 /> */}
 
@@ -1966,7 +1964,6 @@ import js from "@eslint/js";
 
 //                 </Routes>
 
-//             </BrowserRouter>
 //         </>
 //     )
 // }
@@ -1983,7 +1980,6 @@ import js from "@eslint/js";
 //     return (
 //         <>
 
-//             <BrowserRouter>
 
 //                 {/* <Navbar2 /> */}
 
@@ -2017,7 +2013,6 @@ import js from "@eslint/js";
 
 //                 </Routes>
 
-//             </BrowserRouter>
 //         </>
 //     )
 // }
@@ -2104,45 +2099,45 @@ import js from "@eslint/js";
 
 // import React from 'react'
 
-// const App = () => {
+const App = () => {
 
 
-//     const [userData,setUsersData]=useState([])
+    const [userData,setUsersData]=useState([])
 
-//     const[loading,setloading]=useState(false)
-//     useEffect(()=>{
-//         setloading(true)
-//         getUserData()
-//     },[])
+    const[loading,setloading]=useState(false)
+    useEffect(()=>{
+        setloading(true)
+        getUserData()
+    },[])
 
-//     const getUserData= async ()=>{
-//         const  url="http://localhost:3000/user"
-// let  response=await fetch(url)
-//         response=await response.json()
+    const getUserData= async ()=>{
+        const  url="http://localhost:3000/user"
+let  response=await fetch(url)
+        response=await response.json()
 
-//         console.log(response)
-//         setUsersData(response)
-//         setloading(false)
-//     }
-//   return (
-//     <div>
-//         <h1>integrate json server api and loader</h1>
+        console.log(response)
+        setUsersData(response)
+        setloading(false)
+    }
+  return (
+    <div>
+        <h1>integrate json server api and loader</h1>
 
-//         {
+        {
 
-//             !loading?
-//             userData.map((user)=>(
-//                 <div key={user.id}>
+            !loading?
+            userData.map((user)=>(
+                <div key={user.id}>
 
-//             <h3 >{user.name}</h3>
-//                 </div>
-//             ))
-//             :<h1>Data loading</h1>
-//         }
+            <h3 >{user.name}</h3>
+                </div>
+            ))
+            :<h1>Data loading</h1>
+        }
 
-//     </div>
-//   )
-// }
+    </div>
+  )
+}
 
 
 
